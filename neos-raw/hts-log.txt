@@ -1,4 +1,4 @@
-HTTrack3.49-2 launched on Fri, 22 Apr 2022 19:19:21 at https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
+HTTrack3.49-2 launched on Fri, 22 Apr 2022 19:23:36 at https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
 (httrack -O ./neos-raw -r0 -w https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,13 +6,13 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-19:19:24	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.css (from primary/primary)
-19:19:24	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.js (from primary/primary)
-19:19:24	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.gif (from primary/primary)
-19:19:24	Warning: 	Retry after error 502 () at link https://neos.com/+*.css (from primary/primary)
-19:19:25	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.js (from primary/primary)
-19:19:26	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.gif (from primary/primary)
-19:19:26	Error: 	"" (502) after 2 retries at link https://neos.com/+*.css (from primary/primary)
-19:19:27	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/+*.js (from primary/primary)
-19:19:27	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/+*.gif (from primary/primary)
-19:19:27	Warning: 	No data seems to have been transferred during this session! : restoring previous one!
+19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.css (from primary/primary)
+19:23:36	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.js (from primary/primary)
+19:23:36	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.gif (from primary/primary)
+19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.css (from primary/primary)
+19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.js (from primary/primary)
+19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.gif (from primary/primary)
+19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.css (from primary/primary)
+19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.js (from primary/primary)
+19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.gif (from primary/primary)
+19:23:36	Warning: 	No data seems to have been transferred during this session! : restoring previous one!
