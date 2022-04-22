@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # At minute 0 past every 6th hour. https://crontab.guru
-    - cron: '0 */6 * * *'
+    - cron: '0 */3 * * *'
 jobs:
   build:
     name: Scrape website and commit to the repository
