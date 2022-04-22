@@ -3,8 +3,8 @@ name: Website scrape
 on:
   workflow_dispatch:
   schedule:
-    # At minute 0 past every 6th hour. https://crontab.guru
-    - cron: '0 */3 * * *'
+    # https://crontab.guru
+    - cron: '0 */1 * * *'
 jobs:
   # I'm running these as two seperate jobs so that in case one fails, the other will at least pass and commit the changes.
   scrape-raw:
