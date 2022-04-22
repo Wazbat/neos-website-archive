@@ -18,8 +18,8 @@ jobs:
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Configure git
         run: |
-          git config --global user.email "{{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "{{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
       - name: Download website
         # https://www.httrack.com/html/httrack.man.html
         run: httrack -O ./neos --depth=0 --mirror https://neos.com/
