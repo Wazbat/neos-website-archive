@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
       - name: Download website
         # https://www.httrack.com/html/httrack.man.html
-        run: httrack -O ./neos-raw --depth=0 --mirror https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
+        run: httrack -O ./neos-raw --depth=0 --mirror https://neos.com/
       - name: Commit and push
         run:  |
           git pull
