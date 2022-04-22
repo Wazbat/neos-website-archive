@@ -13,9 +13,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install httrack
         run: sudo apt-get install httrack
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Configure git
         run: |
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
@@ -26,5 +23,5 @@ jobs:
       - name: Commit and push
         run:  |
           git add *
-          git commit -m "Website scrape ${{ steps.date.outputs.date }}"
+          git commit -m "Website scrape $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
