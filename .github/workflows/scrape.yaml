@@ -20,7 +20,8 @@ jobs:
       - name: Download website
         # https://www.httrack.com/html/httrack.man.html
         run: httrack -O ./neos --depth=0 --mirror https://neos.com/
-      - name: Commit website
-      - run: git add *
-      - run: git commit -m "Website scrape ${{ steps.date.outputs.date }}"
-      - run: git push origin main
+      - name: Commit and push
+        run:  |
+          git add *
+          git commit -m "Website scrape ${{ steps.date.outputs.date }}"
+          git push origin main
