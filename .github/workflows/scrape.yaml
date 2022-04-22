@@ -24,7 +24,8 @@ jobs:
         run: httrack -O ./neos-raw --depth=0 --mirror https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
       - name: Commit and push
         run:  |
-          git add *
+          git pull
+          git add neos-raw/*
           git commit -m "Raw Website scrape $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
   scrape-local:
@@ -44,6 +45,7 @@ jobs:
         run: httrack --near -%l "en, --quiet *" https://neos.com -O1 "./neos-local" +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
       - name: Commit and push
         run:  |
-          git add *
+          git pull
+          git add neos-local/*
           git commit -m "Local Friendly Website scrape $(date +'%Y-%m-%d %H:%M:%S')"
           git push origin main
