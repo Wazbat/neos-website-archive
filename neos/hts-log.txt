@@ -1,0 +1,13 @@
+HTTrack3.49-2 launched on Fri, 22 Apr 2022 18:25:04 at https://neos.com/
+(httrack -O ./neos -r0 -w https://neos.com/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:25:06	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+18:25:06	Warning: 	Warning: store text/html without scan: ./neos/neos.com/index.html
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 seconds : 2 links scanned, 1 files written (78492 bytes overall) [16877 bytes received at 8438 bytes/sec], 78492 bytes transferred using HTTP compression in 1 files, ratio 20%
+(1 errors, 1 warnings, 0 messages)
