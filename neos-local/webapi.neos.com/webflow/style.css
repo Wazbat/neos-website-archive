@@ -1,0 +1,13 @@
+.chart-label {
+    font-size: 13px;
+    color: #BDA6FF;
+    font-weight: 400;
+    display: inline-block;
+    margin: 20px;
+}
+
+.chart-label input {
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+}
