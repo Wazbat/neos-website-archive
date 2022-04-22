@@ -1,0 +1,8 @@
+-O ./neos-raw -r0 -w https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
+File generated automatically on Fri, 22 Apr 2022 19:19:21, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+
