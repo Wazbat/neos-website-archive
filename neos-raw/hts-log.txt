@@ -1,18 +1,13 @@
-HTTrack3.49-2 launched on Fri, 22 Apr 2022 19:23:36 at https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif
-(httrack -O ./neos-raw -r0 -w https://neos.com/+*.css https://neos.com/+*.js https://neos.com/+*.gif )
+HTTrack3.49-2 launched on Fri, 22 Apr 2022 19:31:30 at https://neos.com/
+(httrack -O ./neos-raw -r0 -w https://neos.com/ )
 
 Information, Warnings and Errors reported for this mirror:
 note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.css (from primary/primary)
-19:23:36	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.js (from primary/primary)
-19:23:36	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/+*.gif (from primary/primary)
-19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.css (from primary/primary)
-19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.js (from primary/primary)
-19:23:36	Warning: 	Retry after error 502 () at link https://neos.com/+*.gif (from primary/primary)
-19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.css (from primary/primary)
-19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.js (from primary/primary)
-19:23:36	Error: 	"" (502) after 2 retries at link https://neos.com/+*.gif (from primary/primary)
-19:23:36	Warning: 	No data seems to have been transferred during this session! : restoring previous one!
+19:31:31	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+19:31:32	Warning: 	Warning: store text/html without scan: ./neos-raw/neos.com/index.html
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 seconds : 2 links scanned, 1 files written (78492 bytes overall), 1 files updated [16859 bytes received at 8429 bytes/sec], 78492 bytes transferred using HTTP compression in 1 files, ratio 20%
+(1 errors, 1 warnings, 0 messages)
