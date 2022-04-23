@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # https://crontab.guru
-    - cron: '0 */3 * * *'
+    - cron: '0 */12 * * *'
 jobs:
   # I'm running these as two seperate jobs so that in case one fails, the other will at least pass and commit the changes.
   scrape-raw:
