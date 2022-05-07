@@ -55145,6 +55145,7 @@ var handleAtcSubmit = function handleAtcSubmit(event, apolloClient) {
 
   var loadingTextFromButton = inputButton.getAttribute(_constants.DATA_ATTR_LOADING_TEXT);
   inputButton.value = loadingTextFromButton ? loadingTextFromButton : eventTarget.getAttribute(_constants.DATA_ATTR_LOADING_TEXT) || '';
+  inputButton.setAttribute('aria-busy', 'true');
   var skuId = fetchFromStore(getInstanceId(eventTarget), 'selectedSku') || '';
   var formData = (0, _commerceUtils.formToObject)(eventTarget);
   var formCount = formData[_constants.NODE_NAME_COMMERCE_ADD_TO_CART_QUANTITY_INPUT];
@@ -55154,6 +55155,7 @@ var handleAtcSubmit = function handleAtcSubmit(event, apolloClient) {
   if (!skuId && errorElement instanceof Element) {
     eventTarget.removeAttribute(_constants.ADD_TO_CART_LOADING);
     inputButton.value = previousButtonValue;
+    inputButton.setAttribute('aria-busy', 'false');
     var errorMsg = errorElement.querySelector("[".concat(_constants.DATA_ATTR_NODE_TYPE, "=\"").concat(_constants.NODE_TYPE_ADD_TO_CART_ERROR, "\"]"));
 
     if (!errorMsg) {
@@ -55189,6 +55191,7 @@ var handleAtcSubmit = function handleAtcSubmit(event, apolloClient) {
     (0, _commerceUtils.addLoadingCallback)(function () {
       eventTarget.removeAttribute(_constants.ADD_TO_CART_LOADING);
       inputButton.value = previousButtonValue;
+      inputButton.setAttribute('aria-busy', 'false');
       var cartElements = document.querySelectorAll("[".concat(_constants.DATA_ATTR_NODE_TYPE, "=\"").concat(_constants.NODE_TYPE_COMMERCE_CART_WRAPPER, "\"][").concat(_constants.DATA_ATTR_OPEN_PRODUCT, "]"));
       cartElements.forEach(function (cart) {
         var evt = new CustomEvent(_constants.CHANGE_CART_EVENT, {
@@ -55206,6 +55209,7 @@ var handleAtcSubmit = function handleAtcSubmit(event, apolloClient) {
   })["catch"](function (error) {
     eventTarget.removeAttribute(_constants.ADD_TO_CART_LOADING);
     inputButton.value = previousButtonValue;
+    inputButton.setAttribute('aria-busy', 'false');
 
     if (errorElement) {
       errorElement.style.removeProperty('display');
@@ -55715,6 +55719,14 @@ var handleAtcPageLoad = function handleAtcPageLoad(event, apolloClient, stripeSt
   }
 
   (0, _forEach["default"])(addToCartForms, function (addToCartForm) {
+    var addToCartButton = (0, _commerceUtils.findElementByNodeType)(_constants.NODE_TYPE_COMMERCE_ADD_TO_CART_BUTTON, addToCartForm); // If this form has an add to cart button, set the `aria-haspopup` to `dialog` or `false`
+    // depending on at least one Cart element having the setting for "Open when product is added"
+
+    if (addToCartButton) {
+      var cartElementsThatOpenOnAdd = document.querySelectorAll("[".concat(_constants.DATA_ATTR_NODE_TYPE, "=\"").concat(_constants.NODE_TYPE_COMMERCE_CART_WRAPPER, "\"][").concat(_constants.DATA_ATTR_OPEN_PRODUCT, "]"));
+      addToCartButton.setAttribute('aria-haspopup', cartElementsThatOpenOnAdd.length > 0 ? 'dialog' : 'false');
+    }
+
     var buyNowButton = (0, _commerceUtils.findElementByNodeType)(_constants.NODE_TYPE_COMMERCE_BUY_NOW_BUTTON, addToCartForm); // Hide the Buy now button if Stripe is not connected
 
     if (stripeStore && !stripeStore.isInitialized()) {
@@ -55781,7 +55793,6 @@ var handleAtcPageLoad = function handleAtcPageLoad(event, apolloClient, stripeSt
           });
         }
 
-        var addToCartButton = (0, _commerceUtils.findElementByNodeType)(_constants.NODE_TYPE_COMMERCE_ADD_TO_CART_BUTTON, addToCartForm);
         var memberships = (_ref6 = data === null || data === void 0 ? void 0 : (_data$database6 = data.database) === null || _data$database6 === void 0 ? void 0 : _data$database6.commerceMemberships) !== null && _ref6 !== void 0 ? _ref6 : [];
         var hasActiveMemebership = Boolean((_memberships$ = memberships[0]) === null || _memberships$ === void 0 ? void 0 : _memberships$.active);
 
@@ -58507,9 +58518,14 @@ var _exportNames = {
   SUBSCRIPTION_EMAIL_TYPES: true,
   MEMBERSHIPS_EMAIL_KEYS: true,
   EMAIL_TEMPLATE_TYPES: true,
-  CONFIRM_UNSAVED_CHANGES_COPY: true
+  CONFIRM_UNSAVED_CHANGES_COPY: true,
+  USER_FIELD_FORM_ID: true,
+  NEW_USER_FIELD_ID: true,
+  USER_FIELD_DEFAULTS: true,
+  DEFAULT_USER_FIELDS: true,
+  MAX_USER_DATA_FIELDS: true
 };
-exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.RESERVED_USER_FIELDS = void 0;
+exports.MAX_USER_DATA_FIELDS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.RESERVED_USER_FIELDS = void 0;
 
 var _utils = __webpack_require__(347);
 
@@ -58744,8 +58760,99 @@ var CONFIRM_UNSAVED_CHANGES_COPY = {
     label: 'Cancel',
     intent: 'default'
   }
-};
+}; // **** User data schema **** //
+
 exports.CONFIRM_UNSAVED_CHANGES_COPY = CONFIRM_UNSAVED_CHANGES_COPY;
+var USER_FIELD_FORM_ID = 'UserFieldForm';
+exports.USER_FIELD_FORM_ID = USER_FIELD_FORM_ID;
+var NEW_USER_FIELD_ID = 'mint-user-field';
+exports.NEW_USER_FIELD_ID = NEW_USER_FIELD_ID;
+var USER_FIELD_DEFAULTS = {
+  PlainText: {
+    id: NEW_USER_FIELD_ID,
+    editable: true,
+    name: '',
+    slug: '',
+    required: false,
+    type: 'PlainText',
+    validations: {
+      minLength: null,
+      maxLength: null
+    }
+  },
+  Email: {
+    id: NEW_USER_FIELD_ID,
+    editable: false,
+    name: '',
+    slug: '',
+    required: false,
+    type: 'Email',
+    validations: {}
+  },
+  Bool: {
+    id: NEW_USER_FIELD_ID,
+    editable: false,
+    name: '',
+    slug: '',
+    required: false,
+    type: 'Bool',
+    validations: {}
+  },
+  Password: {
+    id: NEW_USER_FIELD_ID,
+    editable: false,
+    name: 'Password',
+    slug: '',
+    required: true,
+    type: 'Password',
+    validations: {}
+  }
+};
+exports.USER_FIELD_DEFAULTS = USER_FIELD_DEFAULTS;
+var DEFAULT_USER_FIELDS = [{
+  id: '1',
+  editable: false,
+  name: 'Name',
+  required: false,
+  slug: 'name',
+  type: 'PlainText',
+  validations: {}
+}, {
+  id: '2',
+  editable: false,
+  name: 'Email',
+  required: true,
+  slug: 'email',
+  type: 'Email',
+  validations: {}
+}, {
+  id: '3',
+  editable: false,
+  name: 'Password',
+  required: true,
+  slug: 'password',
+  type: 'Password',
+  validations: {}
+}, {
+  id: '4',
+  editable: false,
+  name: 'Accept privacy',
+  required: false,
+  slug: 'accept-privacy',
+  type: 'Bool',
+  validations: {}
+}, {
+  id: '5',
+  editable: false,
+  name: 'Accept communications',
+  required: false,
+  slug: 'accept-communications',
+  type: 'Bool',
+  validations: {}
+}];
+exports.DEFAULT_USER_FIELDS = DEFAULT_USER_FIELDS;
+var MAX_USER_DATA_FIELDS = 20;
+exports.MAX_USER_DATA_FIELDS = MAX_USER_DATA_FIELDS;
 
 /***/ }),
 /* 730 */
@@ -66290,6 +66397,12 @@ var handleRenderCart = function handleRenderCart(event, apolloClient, stripeStor
   }
 
   var carts = (0, _commerceUtils.findAllElementsByNodeType)(_constants.NODE_TYPE_COMMERCE_CART_WRAPPER);
+
+  if (!carts.length) {
+    (0, _commerceUtils.executeLoadingCallbacks)();
+    return;
+  }
+
   carts.forEach(function (cart) {
     apolloClient.query({
       query: _graphqlTag["default"](_templateObject2(), cart.getAttribute(_constants.CART_QUERY)),
