@@ -20664,6 +20664,34 @@ var handleWebPaymentsButton = function handleWebPaymentsButton(event, apolloClie
 
 var register = function register(handlerProxy) {
   handlerProxy.on('click', isWebPaymentsButtonEvent, handleWebPaymentsButton);
+  handlerProxy.on('keydown', isWebPaymentsButtonEvent, function (event) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      // prevent scrolling on spacebar key press
+      event.preventDefault();
+    } // $FlowIgnore which exists in KeyboardEvent
+
+
+    if (event.which === 13) {
+      for (var _len = arguments.length, rest = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        rest[_key - 1] = arguments[_key];
+      }
+
+      // enter key press
+      return handleWebPaymentsButton.apply(void 0, [event].concat(rest));
+    }
+  });
+  handlerProxy.on('keyup', isWebPaymentsButtonEvent, function (event) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      for (var _len2 = arguments.length, rest = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        rest[_key2 - 1] = arguments[_key2];
+      }
+
+      // spacebar key press
+      return handleWebPaymentsButton.apply(void 0, [event].concat(rest));
+    }
+  });
 };
 
 exports.register = register;
@@ -58781,7 +58809,7 @@ var CONFIRM_UNSAVED_CHANGES_COPY = {
     label: 'Cancel',
     intent: 'default'
   }
-}; // **** User data schema **** //
+}; // **** User account settings **** //
 
 exports.CONFIRM_UNSAVED_CHANGES_COPY = CONFIRM_UNSAVED_CHANGES_COPY;
 var USER_FIELD_FORM_ID = 'UserFieldForm';
