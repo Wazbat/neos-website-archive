@@ -2821,8 +2821,8 @@ figcaption {
 
 .button-primary._2-buttons.width-100 {
   width: 100%;
-  background-image: url("../624482476b7fd15d90829813_Group%2038747.html"), -webkit-gradient(linear, left top, left bottom, from(#1c4efd), to(#2d1e58));
-  background-image: url("../624482476b7fd15d90829813_Group%2038747.html"), linear-gradient(180deg, #1c4efd, #2d1e58);
+  background-image: url("../624482476b7fd15d90829813_Group%2038747.png"), -webkit-gradient(linear, left top, left bottom, from(#1c4efd), to(#2d1e58));
+  background-image: url("../624482476b7fd15d90829813_Group%2038747.png"), linear-gradient(180deg, #1c4efd, #2d1e58);
   background-position: 98% 50%, 0px 0px;
   background-size: auto, auto;
   background-repeat: no-repeat, repeat;
@@ -5020,7 +5020,7 @@ figcaption {
   flex: 1;
   border-radius: 24px;
   background-color: #1649ff;
-  background-image: url("../61e55a07ff9ce0494f45f895_cta-pattern-defi-x-template.html");
+  background-image: url("../61e55a07ff9ce0494f45f895_cta-pattern-defi-x-template.svg");
   background-position: 0% 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -9655,35 +9655,35 @@ figcaption {
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0dc7145f83d_THICCCBOI-Bold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02cea45f83a_THICCCBOI-Bold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0d67745f83c_THICCCBOI-Bold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0e53b45f83b_THICCCBOI-Bold.otf') format('opentype'), url('../61e55a07ff9ce023d245f850_THICCCBOI-Bold.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0dc7145f83d_THICCCBOI-Bold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02cea45f83a_THICCCBOI-Bold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0d67745f83c_THICCCBOI-Bold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0e53b45f83b_THICCCBOI-Bold.otf') format('opentype'), url('../61e55a07ff9ce023d245f850_THICCCBOI-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b1d245f83f_THICCCBOI-Medium.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0c14445f83e_THICCCBOI-Medium.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce01f0e45f841_THICCCBOI-Medium.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b9f345f840_THICCCBOI-Medium.otf') format('opentype'), url('../61e55a07ff9ce0043f45f84d_THICCCBOI-Medium.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b1d245f83f_THICCCBOI-Medium.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0c14445f83e_THICCCBOI-Medium.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce01f0e45f841_THICCCBOI-Medium.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b9f345f840_THICCCBOI-Medium.otf') format('opentype'), url('../61e55a07ff9ce0043f45f84d_THICCCBOI-Medium.svg') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02abc45f845_THICCCBOI-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0533e45f842_THICCCBOI-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0605a45f844_THICCCBOI-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0773645f843_THICCCBOI-Regular.otf') format('opentype'), url('../61e55a07ff9ce0d38845f84e_THICCCBOI-Regular.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02abc45f845_THICCCBOI-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0533e45f842_THICCCBOI-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0605a45f844_THICCCBOI-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0773645f843_THICCCBOI-Regular.otf') format('opentype'), url('../61e55a07ff9ce0d38845f84e_THICCCBOI-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0694f45f84c_THICCCBOI-SemiBold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce04f3645f84a_THICCCBOI-SemiBold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0587f45f846_THICCCBOI-SemiBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce052a245f84b_THICCCBOI-SemiBold.otf') format('opentype'), url('../61e55a07ff9ce06c2345f84f_THICCCBOI-SemiBold.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0694f45f84c_THICCCBOI-SemiBold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce04f3645f84a_THICCCBOI-SemiBold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0587f45f846_THICCCBOI-SemiBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce052a245f84b_THICCCBOI-SemiBold.otf') format('opentype'), url('../61e55a07ff9ce06c2345f84f_THICCCBOI-SemiBold.svg') format('svg');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Icons defi x template';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0208645f853_icons-defi-x-template.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce087ff45f851_icons-defi-x-template.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce07c0145f855_icons-defi-x-template.woff') format('woff'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0f75445f852_icons-defi-x-template.ttf') format('truetype'), url('../61e55a07ff9ce0607f45f854_icons-defi-x-template.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0208645f853_icons-defi-x-template.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce087ff45f851_icons-defi-x-template.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce07c0145f855_icons-defi-x-template.woff') format('woff'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0f75445f852_icons-defi-x-template.ttf') format('truetype'), url('../61e55a07ff9ce0607f45f854_icons-defi-x-template.svg') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
