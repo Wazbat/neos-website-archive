@@ -13005,7 +13005,7 @@ function previouslyCompared(a, b) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SHARED_ALLOWED_FIELD_TYPES = exports.MIN_COLLECTION_LIST_OFFSET = exports.MAX_NESTED_COLLECTION_LIST_LIMIT = exports.MAX_COLLECTION_LIST_LIMIT = exports.DYNAMIC_CONTENT_COMPLEXITY_LIMIT = exports.DEFAULT_COLLECTION_LIMIT = exports.DEFAULT_NESTED_COLLECTION_LIMIT = exports.COLLECTION_TYPES = exports.SCHEDULED_PUBLISH_GRACE_PERIOD_IN_MS = exports.SCHEDULED_PUBLISH_LIMIT_IN_MS = exports.SCHEDULED_PUBLISH_GRANULARITY_IN_MIN = exports.SET_FIELD_MAX_ITEMS = exports.QUERY_FILTER_FOR_STATES = exports.NON_EXISTING_ITEM_ID = exports.CONDITION_INVISIBLE_CLASS = exports.CLASS_NAME_W_DYN_BIND_EMPTY = exports.TENSES_TO_HUMAN_PHRASES_MAP = exports.TENSES_ENUM = exports.PAST = exports.FUTURE = exports.TIME_INTERVALS_ENUM = void 0; // Internal useful constants.
+exports.DATE_FORMAT_OPTIONS = exports.DATETIME_FORMAT_OPTIONS = exports.SHARED_ALLOWED_FIELD_TYPES = exports.MIN_COLLECTION_LIST_OFFSET = exports.MAX_NESTED_COLLECTION_LIST_LIMIT = exports.MAX_COLLECTION_LIST_LIMIT = exports.DYNAMIC_CONTENT_COMPLEXITY_LIMIT = exports.DEFAULT_COLLECTION_LIMIT = exports.DEFAULT_NESTED_COLLECTION_LIMIT = exports.COLLECTION_TYPES = exports.SCHEDULED_PUBLISH_GRACE_PERIOD_IN_MS = exports.SCHEDULED_PUBLISH_LIMIT_IN_MS = exports.SCHEDULED_PUBLISH_GRANULARITY_IN_MIN = exports.SET_FIELD_MAX_ITEMS = exports.QUERY_FILTER_FOR_STATES = exports.NON_EXISTING_ITEM_ID = exports.CONDITION_INVISIBLE_CLASS = exports.CLASS_NAME_W_DYN_BIND_EMPTY = exports.TENSES_TO_HUMAN_PHRASES_MAP = exports.TENSES_ENUM = exports.PAST = exports.FUTURE = exports.TIME_INTERVALS_ENUM = void 0; // Internal useful constants.
 
 var SECOND = 1000;
 var MINUTE = 60 * SECOND;
@@ -13134,6 +13134,12 @@ var SHARED_ALLOWED_FIELD_TYPES = {
   dataWHref: ['PlainText']
 };
 exports.SHARED_ALLOWED_FIELD_TYPES = SHARED_ALLOWED_FIELD_TYPES;
+var DATETIME_FORMAT_OPTIONS = ['MMMM D, YYYY', 'MMMM D, YYYY h:mm A', 'MMMM D, YYYY H:mm', 'MMM D, YYYY', 'MMM D, YYYY h:mm A', 'MMM D, YYYY H:mm', 'dddd, MMMM D, YYYY', 'M/D/YYYY', 'M.D.YYYY', 'D/M/YYYY', 'D.M.YYYY', 'M/D/YYYY h:mm A', 'M/D/YYYY H:mm', 'M.D.YYYY h:mm A', 'M.D.YYYY H:mm', 'D/M/YYYY h:mm A', 'D/M/YYYY H:mm', 'D.M.YYYY h:mm A', 'D.M.YYYY H:mm', 'M/D/YY', 'M.D.YY', 'D/M/YY', 'D.M.YY', 'M/D/YY h:mm a', 'M/D/YY H:mm', 'M.D.YY h:mm a', 'M.D.YY H:mm', 'D/M/YY h:mm a', 'D/M/YY H:mm', 'D.M.YY h:mm a', 'D.M.YY H:mm', 'YYYY-MM-DD', 'YYYY-MM-DD h:mm a', 'YYYY-MM-DD H:mm', 'MMM D', 'D MMM', 'MMMM YYYY', 'MMM YYYY', 'MM/YYYY', 'h:mm a', 'H:mm', 'D', 'DD', 'ddd', 'dddd', 'M', 'MM', 'MMM', 'MMMM', 'YY', 'YYYY'];
+exports.DATETIME_FORMAT_OPTIONS = DATETIME_FORMAT_OPTIONS;
+var DATE_FORMAT_OPTIONS = DATETIME_FORMAT_OPTIONS.filter(function (format) {
+  return !/[hHmaA]/.test(format);
+});
+exports.DATE_FORMAT_OPTIONS = DATE_FORMAT_OPTIONS;
 
 /***/ }),
 /* 146 */
@@ -58513,16 +58519,19 @@ var DirectiveLocation = exports.DirectiveLocation = Object.freeze({
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(0);
+var _interopRequireDefault2 = __webpack_require__(0);
 
-var _defineProperty2 = _interopRequireDefault(__webpack_require__(15));
+var _defineProperty2 = _interopRequireDefault2(__webpack_require__(15));
 
 var _KEY_FROM_RESERVED_US, _NAMES_FROM_USER_FIEL;
+
+var _interopRequireDefault = __webpack_require__(0);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _exportNames = {
+  RESERVED_USER_PREFIX: true,
   RESERVED_USER_FIELDS: true,
   KEY_FROM_RESERVED_USER_FIELD: true,
   NAMES_FROM_USER_FIELDS: true,
@@ -58560,9 +58569,14 @@ var _exportNames = {
   NEW_USER_FIELD_ID: true,
   USER_FIELD_DEFAULTS: true,
   DEFAULT_USER_FIELDS: true,
-  MAX_USER_DATA_FIELDS: true
+  SETUP_GUIDE_KEYS: true,
+  SETUP_GUIDE_ALL_KEYS: true,
+  MAX_USER_DATA_FIELDS: true,
+  MAX_UPDATE_USER_DATA_FIELDS: true
 };
-exports.MAX_USER_DATA_FIELDS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = void 0;
+exports.MAX_UPDATE_USER_DATA_FIELDS = exports.MAX_USER_DATA_FIELDS = exports.SETUP_GUIDE_ALL_KEYS = exports.SETUP_GUIDE_KEYS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = exports.RESERVED_USER_PREFIX = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__(11));
 
 var _utils = __webpack_require__(347);
 
@@ -58592,6 +58606,7 @@ Object.keys(_types).forEach(function (key) {
   });
 });
 var RESERVED_USER_PREFIX = 'wf-user-field-';
+exports.RESERVED_USER_PREFIX = RESERVED_USER_PREFIX;
 var RESERVED_USER_FIELDS = {
   name: RESERVED_USER_PREFIX + 'name',
   acceptPrivacy: RESERVED_USER_PREFIX + 'accept-privacy',
@@ -58632,7 +58647,8 @@ var USYS_DATA_ATTRS = {
   userAccount: 'data-wf-user-account',
   subscriptionCancel: 'data-wf-user-subscription-cancel',
   userId: 'data-wf-user-id',
-  field: 'data-wf-user-field'
+  field: 'data-wf-user-field',
+  fieldType: 'data-wf-user-field-type'
 };
 exports.USYS_DATA_ATTRS = USYS_DATA_ATTRS;
 var USYS_DOM_CLASS_NAMES = {
@@ -58645,7 +58661,8 @@ var USYS_FORM_TYPES = {
   login: 'login',
   signup: 'signup',
   updatePassword: 'updatePassword',
-  resetPassword: 'resetPassword'
+  resetPassword: 'resetPassword',
+  account: 'userAccount'
 };
 exports.USYS_FORM_TYPES = USYS_FORM_TYPES;
 var USYS_INPUT_TYPES = {
@@ -58886,10 +58903,34 @@ var DEFAULT_USER_FIELDS = [{
   slug: 'accept-communications',
   type: 'Bool',
   validations: {}
-}];
+}]; // Contains the keys that usysSettings stores
+
 exports.DEFAULT_USER_FIELDS = DEFAULT_USER_FIELDS;
-var MAX_USER_DATA_FIELDS = 20;
+var SETUP_GUIDE_KEYS = {
+  hasVisitedAccessDeniedPage: 'hasVisitedAccessDeniedPage',
+  hasVisitedLoginPage: 'hasVisitedLoginPage',
+  hasVisitedSignUpPage: 'hasVisitedSignUpPage',
+  hasVisitedUserAccountSettings: 'hasVisitedUserAccountSettings',
+  hasVisitedUserAccountPage: 'hasVisitedUserAccountPage'
+}; // Contains all the setup guide keys, server and frontend-only
+
+exports.SETUP_GUIDE_KEYS = SETUP_GUIDE_KEYS;
+var SETUP_GUIDE_ALL_KEYS = (0, _extends2["default"])({}, SETUP_GUIDE_KEYS, {
+  hasHostingPlan: 'hasHostingPlan',
+  hasEcommerce: 'hasEcommerce',
+  hasEnabledSSL: 'hasEnabledSSL',
+  hasUsers: 'hasUsers',
+  hasAccessGroups: 'hasAccessGroups',
+  hasRestrictedContent: 'hasRestrictedContent',
+  hasRestrictedProducts: 'hasRestrictedProducts'
+});
+exports.SETUP_GUIDE_ALL_KEYS = SETUP_GUIDE_ALL_KEYS;
+var MAX_USER_DATA_FIELDS = 20; // `name` and `accept-communications` common fields can also be updated
+// along with custom fields currently
+
 exports.MAX_USER_DATA_FIELDS = MAX_USER_DATA_FIELDS;
+var MAX_UPDATE_USER_DATA_FIELDS = MAX_USER_DATA_FIELDS + 2;
+exports.MAX_UPDATE_USER_DATA_FIELDS = MAX_UPDATE_USER_DATA_FIELDS;
 
 /***/ }),
 /* 730 */
@@ -59323,14 +59364,15 @@ var _logInErrorStates, _signUpErrorStates, _updatePasswordErrorS2;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.resetPasswordErrorStates = exports.updatePasswordErrorStates = exports.signUpErrorStates = exports.SIGNUP_ERROR_CATEGORY = exports.logInErrorStates = exports.__DEPRECATED__logInErrorStates = exports.RESET_PASSWORD_UI_ERROR_CODES = exports.UPDATE_PASSWORD_UI_ERROR_CODES = exports.ERROR_ATTRIBUTE_PREFIX = exports.SIGNUP_UI_ERROR_CODES = exports.LOGIN_UI_ERROR_CODES = exports.ErrorStateToCopy = exports.ERROR_STATE = exports.ERROR_MSG_CLASS = void 0;
+exports.updateAccountErrorStates = exports.UPDATE_ACCOUNT_ERROR_CODES = exports.resetPasswordErrorStates = exports.updatePasswordErrorStates = exports.signUpErrorStates = exports.SIGNUP_ERROR_CATEGORY = exports.logInErrorStates = exports.__DEPRECATED__logInErrorStates = exports.RESET_PASSWORD_UI_ERROR_CODES = exports.UPDATE_PASSWORD_UI_ERROR_CODES = exports.ERROR_ATTRIBUTE_PREFIX = exports.SIGNUP_UI_ERROR_CODES = exports.LOGIN_UI_ERROR_CODES = exports.ErrorStateToCopy = exports.ERROR_STATE = exports.ERROR_MSG_CLASS = void 0;
 var ERROR_MSG_CLASS = 'user-form-error-msg';
 exports.ERROR_MSG_CLASS = ERROR_MSG_CLASS;
 var ERROR_STATE = {
   SIGNUP: 'signup-error-state',
   LOGIN: 'login-error-state',
   UPDATE_PASSWORD: 'update-password-error-state',
-  RESET_PASSWORD: 'reset-password-error-state'
+  RESET_PASSWORD: 'reset-password-error-state',
+  ACCOUNT_UPDATE: 'account-update-error-state'
 };
 exports.ERROR_STATE = ERROR_STATE;
 
@@ -59363,6 +59405,13 @@ var ErrorStateToCopy = function ErrorStateToCopy(errorStateType, id) {
     return (_ref4 = (_resetPasswordErrorSt = resetPasswordErrorStates[id]) === null || _resetPasswordErrorSt === void 0 ? void 0 : _resetPasswordErrorSt.copy) !== null && _ref4 !== void 0 ? _ref4 : null;
   }
 
+  if (errorStateType === 'account-update-error-state') {
+    var _ref5, _updateAccountErrorSt; // $FlowIgnore
+
+
+    return (_ref5 = (_updateAccountErrorSt = updateAccountErrorStates[id]) === null || _updateAccountErrorSt === void 0 ? void 0 : _updateAccountErrorSt.copy) !== null && _ref5 !== void 0 ? _ref5 : null;
+  }
+
   console.error("copy for ".concat(errorStateType, " not found"));
   return null;
 };
@@ -59388,13 +59437,13 @@ var ERROR_ATTRIBUTE_PREFIX = {
   SIGNUP: 'wf-signup-form',
   LOGIN: 'wf-login-form',
   RESET_PASSWORD: 'wf-reset-pw-form',
-  UPDATE_PASSWORD: 'wf-update-pw-form'
+  UPDATE_PASSWORD: 'wf-update-pw-form',
+  ACCOUNT_UPDATE: 'wf-account-update-form'
 };
 exports.ERROR_ATTRIBUTE_PREFIX = ERROR_ATTRIBUTE_PREFIX;
 var UPDATE_PASSWORD_UI_ERROR_CODES = {
   GENERAL_ERROR: 'GENERAL_ERROR',
-  WEAK_PASSWORD: 'WEAK_PASSWORD',
-  REPEAT_PASSWORD_USED: 'REPEAT_PASSWORD_USED'
+  WEAK_PASSWORD: 'WEAK_PASSWORD'
 };
 exports.UPDATE_PASSWORD_UI_ERROR_CODES = UPDATE_PASSWORD_UI_ERROR_CODES;
 var RESET_PASSWORD_UI_ERROR_CODES = {
@@ -59505,11 +59554,6 @@ var updatePasswordErrorStates = (_updatePasswordErrorS2 = {}, (0, _definePropert
   name: 'Weak password',
   copy: 'Your password must be at least 8 characters.',
   path: ['data', 'users', UPDATE_PASSWORD_UI_ERROR_CODES.WEAK_PASSWORD]
-}), (0, _defineProperty2["default"])(_updatePasswordErrorS2, UPDATE_PASSWORD_UI_ERROR_CODES.REPEAT_PASSWORD_USED, {
-  id: UPDATE_PASSWORD_UI_ERROR_CODES.REPEAT_PASSWORD_USED,
-  name: 'Repeat password used',
-  copy: 'You used the same password as your previous one. Please try again with a new password.',
-  path: ['data', 'users', UPDATE_PASSWORD_UI_ERROR_CODES.REPEAT_PASSWORD_USED]
 }), _updatePasswordErrorS2);
 exports.updatePasswordErrorStates = updatePasswordErrorStates;
 var resetPasswordErrorStates = (0, _defineProperty2["default"])({}, RESET_PASSWORD_UI_ERROR_CODES.GENERAL_ERROR, {
@@ -59519,6 +59563,17 @@ var resetPasswordErrorStates = (0, _defineProperty2["default"])({}, RESET_PASSWO
   path: ['data', 'users', RESET_PASSWORD_UI_ERROR_CODES.GENERAL_ERROR]
 });
 exports.resetPasswordErrorStates = resetPasswordErrorStates;
+var UPDATE_ACCOUNT_ERROR_CODES = {
+  GENERAL_ERROR: 'GENERAL_ERROR'
+};
+exports.UPDATE_ACCOUNT_ERROR_CODES = UPDATE_ACCOUNT_ERROR_CODES;
+var updateAccountErrorStates = (0, _defineProperty2["default"])({}, UPDATE_ACCOUNT_ERROR_CODES.GENERAL_ERROR, {
+  id: UPDATE_ACCOUNT_ERROR_CODES.GENERAL_ERROR,
+  name: 'General error',
+  copy: 'There was an error updating your account. Please try again, or contact us if you continue to have problems.',
+  path: ['data', 'users', UPDATE_ACCOUNT_ERROR_CODES.GENERAL_ERROR]
+});
+exports.updateAccountErrorStates = updateAccountErrorStates;
 
 /***/ }),
 /* 735 */
@@ -67121,6 +67176,26 @@ var handleSubmitFormInsideCheckoutContainer = function handleSubmitFormInsideChe
 var register = function register(handlerProxy) {
   handlerProxy.on(_constants.RENDER_TREE_EVENT, Boolean, handleRenderCheckout);
   handlerProxy.on('click', isPlaceOrderButtonEvent, handlePlaceOrder);
+  handlerProxy.on('keydown', isPlaceOrderButtonEvent, function (event, apolloClient, StripeStore) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      // prevent scrolling on spacebar key press
+      event.preventDefault();
+    } // $FlowIgnore which exists in KeyboardEvent
+
+
+    if (event.which === 13) {
+      // enter key press
+      return handlePlaceOrder(event, apolloClient, StripeStore);
+    }
+  });
+  handlerProxy.on('keyup', isPlaceOrderButtonEvent, function (event, apolloClient, StripeStore) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      // spacebar key press
+      return handlePlaceOrder(event, apolloClient, StripeStore);
+    }
+  });
   handlerProxy.on('submit', isApplyDiscountFormEvent, handleApplyDiscount); // we use blur events on the text inputs, and change event on the country select
   // so that we update faster (blur on a select element requires going into another field)
 
@@ -68702,6 +68777,26 @@ exports.renderPaypalButtons = renderPaypalButtons;
 var register = function register(handlerProxy) {
   handlerProxy.on(_constants.RENDER_TREE_EVENT, Boolean, handleRenderPayPalCheckout);
   handlerProxy.on('click', isPlaceOrderButtonEvent, handlePlaceOrder);
+  handlerProxy.on('keydown', isPlaceOrderButtonEvent, function (event, apolloClient) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      // prevent scrolling on spacebar key press
+      event.preventDefault();
+    } // $FlowIgnore which exists in KeyboardEvent
+
+
+    if (event.which === 13) {
+      // enter key press
+      return handlePlaceOrder(event, apolloClient);
+    }
+  });
+  handlerProxy.on('keyup', isPlaceOrderButtonEvent, function (event, apolloClient) {
+    // $FlowIgnore which exists in KeyboardEvent
+    if (event.which === 32) {
+      // spacebar key press
+      return handlePlaceOrder(event, apolloClient);
+    }
+  });
 };
 
 var _default = {
@@ -69199,14 +69294,17 @@ Webflow.define('forms', module.exports = function ($, _) {
     // The file upload Input is not stylable by the designer, so we are
     // going to pretend the Label is the input. ¯\_(ツ)_/¯
 
-    $label.on('click keydown', function (e) {
-      if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) {
-        return;
-      }
+    if (!inApp) {
+      $label.on('click keydown', function (e) {
+        if (e.type === 'keydown' && e.which !== 13 && e.which !== 32) {
+          return;
+        }
 
-      e.preventDefault();
-      $input.click();
-    }); // Both of these are added through CSS
+        e.preventDefault();
+        $input.click();
+      });
+    } // Both of these are added through CSS
+
 
     $label.find('.w-icon-file-upload-icon').attr('aria-hidden', 'true');
     $removeEl.find('.w-icon-file-upload-remove').attr('aria-hidden', 'true');
