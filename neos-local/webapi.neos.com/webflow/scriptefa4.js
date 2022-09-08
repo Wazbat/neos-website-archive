@@ -1,7 +1,8 @@
+
 jQuery(function($){
-    $("#js-add-wallet").on("click", function(){
+    /*$("#js-add-wallet").on("click", function(){
         window.addToWallet();
-    });
+    });*/
 
     var timestamp = Math.floor(Date.now() / 1000);
 
