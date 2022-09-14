@@ -1,8 +1,95 @@
 
 jQuery(function($){
-    /*$("#js-add-wallet").on("click", function(){
-        window.addToWallet();
-    });*/
+    $("#js-add-wallet").on("click", function(){
+        window.ethereum.enable().then(()=>{
+            addToWallet();
+        }).catch(e=>{alert("Došlo k chybě");});
+    });
+    
+    function addToWallet() {
+        if (typeof ethereum !== 'undefined') {
+            web3obj = new Web3(ethereum);
+        } else if (typeof web3 !== 'undefined') {
+            web3obj = new Web3(web3.currentProvider);
+        } else {
+            alert('No web3 provider');
+            return;
+        }
+  
+        var network = 0;
+        web3obj.eth.net.getId((err, netId) => {
+            network = netId.toString();
+            switch (network) {
+                case "1":
+                    network = 'mainnet';
+                    break;
+                case "2":
+                    network = 'morden';
+                    break;
+                case "3":
+                    network = 'ropsten';
+                    break;
+                case "4":
+                    network = 'rinkeby';
+                    break;
+                case "5":
+                    network = 'goerli';
+                    break;
+                case "42":
+                    network = 'kovan';
+                    break;
+                case "11155111":
+                    network = 'sepolia';
+                    break;
+                case "246":
+                    network = 'ecw';
+                    break
+                default:
+                    console.log('This is an unknown network.');
+            }
+    
+    try {
+            window.ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: '0x1' }], // chainId of mainnet
+            }).then(() => {
+    
+                try {
+                    web3obj.eth.currentProvider.sendAsync({
+                        method: 'wallet_watchAsset',
+                          params: {
+                            type: 'ERC20',
+                            options: {
+                              address: '0xDB5C3C46E28B53a39C255AA39A411dD64e5fed9c',
+                              symbol: 'NCR',
+                              decimals: 18,
+                              image: 'https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/621ce5936c767882d5fc88ea_NeosAssets_LOGO_2021_Horizontal%201.svg',
+                            },
+                            id: Math.round(Math.random() * 100000)
+                        }
+                        }, function (err, data) {
+                            if (!err) {
+                                if (data.result) {
+                                    console.log('Neos Credits successfully added to wallet!')
+                                } else {
+                                    console.log(data);
+                                    console.log('Something went wrong.');
+                                }
+                            } else {
+                                console.log(err.message);
+                            }
+                        }
+                    );
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+            
+            } catch (e) {
+                    console.log(e);
+            }
+        });
+    }
 
     var timestamp = Math.floor(Date.now() / 1000);
 
