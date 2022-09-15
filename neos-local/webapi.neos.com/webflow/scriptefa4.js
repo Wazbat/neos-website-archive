@@ -48,45 +48,45 @@ jQuery(function($){
                     console.log('This is an unknown network.');
             }
     
-    try {
-            window.ethereum.request({
-                method: 'wallet_switchEthereumChain',
-                params: [{ chainId: '0x1' }], // chainId of mainnet
-            }).then(() => {
-    
-                try {
-                    web3obj.eth.currentProvider.sendAsync({
-                        method: 'wallet_watchAsset',
-                          params: {
-                            type: 'ERC20',
-                            options: {
-                              address: '0xDB5C3C46E28B53a39C255AA39A411dD64e5fed9c',
-                              symbol: 'NCR',
-                              decimals: 18,
-                              image: 'https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/621ce5936c767882d5fc88ea_NeosAssets_LOGO_2021_Horizontal%201.svg',
-                            },
-                            id: Math.round(Math.random() * 100000)
-                        }
-                        }, function (err, data) {
-                            if (!err) {
-                                if (data.result) {
-                                    console.log('Neos Credits successfully added to wallet!')
-                                } else {
-                                    console.log(data);
-                                    console.log('Something went wrong.');
-                                }
-                            } else {
-                                console.log(err.message);
+            try {
+                window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: '0x1' }], // chainId of mainnet
+                }).then(() => {
+        
+                    try {
+                        web3obj.eth.currentProvider.sendAsync({
+                            method: 'wallet_watchAsset',
+                              params: {
+                                type: 'ERC20',
+                                options: {
+                                  address: '0xDB5C3C46E28B53a39C255AA39A411dD64e5fed9c',
+                                  symbol: 'NCR',
+                                  decimals: 18,
+                                  image: 'https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/621ce5936c767882d5fc88ea_NeosAssets_LOGO_2021_Horizontal%201.svg',
+                                },
+                                id: Math.round(Math.random() * 100000)
                             }
-                        }
-                    );
-                } catch (e) {
-                    console.log(e);
-                }
-            });
+                            }, function (err, data) {
+                                if (!err) {
+                                    if (data.result) {
+                                        console.log('Neos Credits successfully added to wallet!')
+                                    } else {
+                                        console.log(data);
+                                        console.log('Something went wrong.');
+                                    }
+                                } else {
+                                    console.log(err.message);
+                                }
+                            }
+                        );
+                    } catch (e) {
+                        console.log(e);
+                    }
+                });
             
             } catch (e) {
-                    console.log(e);
+                console.log(e);
             }
         });
     }
