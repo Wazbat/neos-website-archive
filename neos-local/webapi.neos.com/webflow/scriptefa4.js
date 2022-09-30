@@ -1,9 +1,13 @@
 
 jQuery(function($){
     $("#js-add-wallet").on("click", function(){
+        if (typeof ethereum !== 'undefined') {
         window.ethereum.enable().then(()=>{
             addToWallet();
         }).catch(e=>{alert("Došlo k chybě");});
+        } else {
+            alert("No wallet detected.");
+        }
     });
     
     function addToWallet() {
