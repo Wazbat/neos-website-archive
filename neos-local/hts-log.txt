@@ -1,4 +1,4 @@
-HTTrack3.49-2 launched on Mon, 10 Oct 2022 00:56:41 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-2 launched on Mon, 10 Oct 2022 12:21:17 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,8 +6,10 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-00:56:42	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
-01:12:32	Error: 	"Forbidden" (403) at link https://uploads-ssl.webflow.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
+12:21:19	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+12:23:10	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
+12:38:40	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
+12:38:41	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/features (from https://neos.com/)
 
-HTTrack Website Copier/3.49-2 mirror complete in 15 minutes 51 seconds : 98 links scanned, 95 files written (26260385 bytes overall), 7 files updated [507265 bytes received at 533 bytes/sec], 744825 bytes transferred using HTTP compression in 6 files, ratio 29%, 1.0 requests per connection
-(2 errors, 0 warnings, 0 messages)
+HTTrack Website Copier/3.49-2 mirror complete in 17 minutes 24 seconds : 97 links scanned, 92 files written (25681599 bytes overall), 5 files updated [256097 bytes received at 245 bytes/sec], 713651 bytes transferred using HTTP compression in 5 files, ratio 29%, 1.0 requests per connection
+(2 errors, 2 warnings, 0 messages)
