@@ -17,8 +17,8 @@ jobs:
         run: sudo apt-get install httrack
       - name: Configure git
         run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git config --global user.name "github-actions"
       - name: Download website
         # https://www.httrack.com/html/httrack.man.html
         run: httrack -O ./neos-raw --depth=0 --mirror https://neos.com/
@@ -38,8 +38,8 @@ jobs:
         run: sudo apt-get install httrack
       - name: Configure git
         run: |
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git config --global user.name "github-actions"
       - name: Download local friendly website
         # This version of the command rewrites all links and downloads other resources from the website like images
         run: httrack --near --quiet --footer "" -%l "en, *" https://neos.com -O1 "./neos-local" +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
