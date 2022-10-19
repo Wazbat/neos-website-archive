@@ -1,5 +1,5 @@
 -O ./neos-raw -r0 -w https://neos.com/
-File generated automatically on Tue, 18 Oct 2022 17:45:31, do NOT edit
+File generated automatically on Wed, 19 Oct 2022 00:58:10, do NOT edit
 
 To update a mirror, just launch httrack without any parameters
 The existing cache will be used (and modified)
