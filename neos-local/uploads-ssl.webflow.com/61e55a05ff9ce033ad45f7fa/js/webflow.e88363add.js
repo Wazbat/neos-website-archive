@@ -1810,6 +1810,7 @@ var _exportNames = {
   DEFAULT_SESSION_DURATION_IN_MS: true,
   DEFAULT_SESSION_TOKEN_DURATION_IN_MS: true,
   DEFAULT_TOKEN_AGE_MS: true,
+  MAX_NUM_USERS: true,
   MAX_NUM_GROUPS: true,
   MIN_GROUP_ID_LENGTH: true,
   MAX_GROUP_ID_LENGTH: true,
@@ -1830,9 +1831,10 @@ var _exportNames = {
   MAX_USER_DATA_FIELDS: true,
   MAX_UPDATE_USER_DATA_FIELDS: true,
   USYS_FIELD_PATH: true,
-  USYS_CONTEXT_PATH: true
+  USYS_CONTEXT_PATH: true,
+  USER_ACCESS_META_OPTIONS: true
 };
-exports.USYS_CONTEXT_PATH = exports.USYS_FIELD_PATH = exports.MAX_UPDATE_USER_DATA_FIELDS = exports.MAX_USER_DATA_FIELDS = exports.SETUP_GUIDE_ALL_KEYS = exports.SETUP_GUIDE_KEYS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = exports.RESERVED_USER_PREFIX = void 0;
+exports.USER_ACCESS_META_OPTIONS = exports.USYS_CONTEXT_PATH = exports.USYS_FIELD_PATH = exports.MAX_UPDATE_USER_DATA_FIELDS = exports.MAX_USER_DATA_FIELDS = exports.SETUP_GUIDE_ALL_KEYS = exports.SETUP_GUIDE_KEYS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.MAX_NUM_USERS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = exports.RESERVED_USER_PREFIX = void 0;
 
 var _extends2 = _interopRequireDefault(__webpack_require__(11));
 
@@ -2025,6 +2027,8 @@ var DEFAULT_SESSION_TOKEN_DURATION_IN_MS = 4 * HOUR;
 exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = DEFAULT_SESSION_TOKEN_DURATION_IN_MS;
 var DEFAULT_TOKEN_AGE_MS = HOUR;
 exports.DEFAULT_TOKEN_AGE_MS = DEFAULT_TOKEN_AGE_MS;
+var MAX_NUM_USERS = 20000;
+exports.MAX_NUM_USERS = MAX_NUM_USERS;
 var MAX_NUM_GROUPS = 20;
 exports.MAX_NUM_GROUPS = MAX_NUM_GROUPS;
 var MIN_GROUP_ID_LENGTH = 2;
@@ -2234,6 +2238,8 @@ var USYS_CONTEXT_PATH = [{
   at: 'context'
 }];
 exports.USYS_CONTEXT_PATH = USYS_CONTEXT_PATH;
+var USER_ACCESS_META_OPTIONS = ['LOGGED_IN'];
+exports.USER_ACCESS_META_OPTIONS = USER_ACCESS_META_OPTIONS;
 
 /***/ }),
 /* 38 */
@@ -32646,7 +32652,13 @@ var getCustomFields = function getCustomFields(form) {
       };
 
       if (includeValue) {
-        elementData.value = typeGetter[fieldType](ele);
+        var value = typeGetter[fieldType](ele);
+
+        if (value === '') {
+          elementData.value = null;
+        } else {
+          elementData.value = value;
+        }
       }
 
       payload.push(elementData);
@@ -68063,7 +68075,8 @@ function handleUserInvite(email) {
   } // disable email input
 
 
-  emailInput.disabled = true; // and set the value to the user's email
+  emailInput.disabled = true;
+  emailInput.classList.add('w-input-disabled'); // and set the value to the user's email
 
   emailInput.value = email;
 } // users are sent to the sign up page to complete verification

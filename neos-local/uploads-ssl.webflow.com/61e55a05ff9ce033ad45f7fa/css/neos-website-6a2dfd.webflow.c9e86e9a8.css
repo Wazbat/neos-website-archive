@@ -1,4 +1,4 @@
-/* Generated on: Mon Oct 03 2022 05:43:20 GMT+0000 (Coordinated Universal Time) */
+/* Generated on: Wed Oct 19 2022 13:49:06 GMT+0000 (Coordinated Universal Time) */
 /* ==========================================================================
    normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css 
    ========================================================================== */
@@ -6476,6 +6476,11 @@ figcaption {
 .image-partner {
   margin-right: 20px;
   margin-left: 20px;
+  opacity: 1;
+}
+
+.image-partner.opacity-9 {
+  opacity: 0.72;
 }
 
 .gray-bg {
@@ -6599,13 +6604,13 @@ figcaption {
 }
 
 .image-6.image-bilaxy {
-  margin: -12px 28px -12px 27px;
+  margin: 5px 28px -1px 27px;
   padding-bottom: 0px;
 }
 
 .image-6.image-coinbetter {
-  margin-top: 2px;
-  margin-bottom: 3px;
+  margin-top: 0px;
+  margin-bottom: -3px;
   padding-bottom: 0px;
 }
 
