@@ -61400,7 +61400,7 @@ function testSingleCondition(_ref) {
     return true;
   }
   /*
-    Current and legacy renderers send out item data in different forms.
+    The renderer send out item data in different forms.
     Here, we first try to retrive the item field value in the current format,
     if that fails, we fall back to the legacy format.
      The main difference is in how item references are treated in itemData
