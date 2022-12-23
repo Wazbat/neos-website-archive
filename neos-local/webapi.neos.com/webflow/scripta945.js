@@ -115,7 +115,7 @@ jQuery(function($){
     
     
     
-    
+    /*
     $.get(api + 'poloniex/data/price.txt?t='+timestamp, function(data2) { 
         $("#js-poloniex-course").text("$"+(Math.round(data2*100)/100));
     });
@@ -152,7 +152,7 @@ jQuery(function($){
             $("#js-bitrue-course-percent").css("color","red");
         }
     });
-    
+    */
     
     $.get(api + 'bkex/data/price.txt?t='+timestamp, function(data2) { 
         $("#js-bkex-course").text("$"+(Math.round(data2*100)/100));
