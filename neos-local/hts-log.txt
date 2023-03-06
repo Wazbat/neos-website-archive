@@ -1,4 +1,4 @@
-HTTrack3.49-2+libhtsjava.so.2 launched on Sun, 05 Mar 2023 12:12:30 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-2+libhtsjava.so.2 launched on Mon, 06 Mar 2023 00:39:47 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,10 +6,8 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-12:12:31	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
-12:14:41	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
-12:30:52	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
-12:30:53	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/features (from https://neos.com/)
-
-HTTrack Website Copier/3.49-2 mirror complete in 18 minutes 23 seconds : 98 links scanned, 93 files written (25767715 bytes overall), 1 files updated [59234 bytes received at 53 bytes/sec], 72318 bytes transferred using HTTP compression in 1 files, ratio 18%, 1.0 requests per connection
-(2 errors, 2 warnings, 0 messages)
+00:39:49	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+00:39:50	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/ (from primary/primary)
+00:39:51	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/ (from primary/primary)
+00:39:52	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/ (from primary/primary)
+00:39:52	Warning: 	No data seems to have been transferred during this session! : restoring previous one!
