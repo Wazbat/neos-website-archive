@@ -1494,7 +1494,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _exportNames = {
-  TEMP_IS_TESTING_FILE_INPUT: true,
   RESERVED_USER_PREFIX: true,
   RESERVED_USER_FIELDS: true,
   KEY_FROM_RESERVED_USER_FIELD: true,
@@ -1518,7 +1517,13 @@ var _exportNames = {
   DEFAULT_SESSION_DURATION_IN_MS: true,
   DEFAULT_SESSION_TOKEN_DURATION_IN_MS: true,
   DEFAULT_TOKEN_AGE_MS: true,
-  MAX_NUM_USERS: true,
+  STARTER_MAX_NUM_USERS: true,
+  BASIC_MAX_NUM_USERS: true,
+  BUSINESS_MAX_NUM_USERS: true,
+  ECOMM_STANDARD_MAX_NUM_USERS: true,
+  ECOMM_PLUS_MAX_NUM_USERS: true,
+  HARD_LIMIT_MAX_NUM_USERS: true,
+  SUBSCRIPTION_USER_LIMITS: true,
   MAX_NUM_GROUPS: true,
   MIN_GROUP_ID_LENGTH: true,
   MAX_GROUP_ID_LENGTH: true,
@@ -1546,9 +1551,11 @@ var _exportNames = {
   EXCEEDS_MAX_IMAGE_SIZE_ERROR: true,
   NO_REQUIRED_ATTRIBUTE: true,
   USER_STATUSES: true,
-  USER_PAGE_SIZE: true
+  USER_PAGE_SIZE: true,
+  USER_CSV_IMPORT_STATUS_POLLING_INTERVAL: true,
+  USER_CSV_IMPORT_STATUS_MAX_TRIES: true
 };
-exports.USER_PAGE_SIZE = exports.USER_STATUSES = exports.NO_REQUIRED_ATTRIBUTE = exports.EXCEEDS_MAX_IMAGE_SIZE_ERROR = exports.EXCEEDS_MAX_FILE_SIZE_ERROR = exports.USER_ACCESS_META_OPTIONS = exports.TEMP_STATE_PATH = exports.USYS_CONTEXT_PATH = exports.USYS_FIELD_PATH = exports.MAX_UPDATE_USER_DATA_FIELDS = exports.MAX_USER_DATA_FIELDS = exports.SETUP_GUIDE_ALL_KEYS = exports.SETUP_GUIDE_KEYS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.MAX_NUM_USERS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = exports.RESERVED_USER_PREFIX = exports.TEMP_IS_TESTING_FILE_INPUT = void 0;
+exports.USER_CSV_IMPORT_STATUS_MAX_TRIES = exports.USER_CSV_IMPORT_STATUS_POLLING_INTERVAL = exports.USER_PAGE_SIZE = exports.USER_STATUSES = exports.NO_REQUIRED_ATTRIBUTE = exports.EXCEEDS_MAX_IMAGE_SIZE_ERROR = exports.EXCEEDS_MAX_FILE_SIZE_ERROR = exports.USER_ACCESS_META_OPTIONS = exports.TEMP_STATE_PATH = exports.USYS_CONTEXT_PATH = exports.USYS_FIELD_PATH = exports.MAX_UPDATE_USER_DATA_FIELDS = exports.MAX_USER_DATA_FIELDS = exports.SETUP_GUIDE_ALL_KEYS = exports.SETUP_GUIDE_KEYS = exports.DEFAULT_USER_FIELDS = exports.USER_FIELD_DEFAULTS = exports.NEW_USER_FIELD_ID = exports.USER_FIELD_FORM_ID = exports.CONFIRM_UNSAVED_CHANGES_COPY = exports.EMAIL_TEMPLATE_TYPES = exports.MEMBERSHIPS_EMAIL_KEYS = exports.SUBSCRIPTION_EMAIL_TYPES = exports.ACCESS_GROUP_FREE_TYPE = exports.ACCESS_GROUP_ADMISSION_TYPE = exports.ACCESS_GROUP_INLINE_PRODUCT_FIELD_SLUG = exports.USYS_TOKEN_TYPES = exports.MAX_GROUP_ID_LENGTH = exports.MIN_GROUP_ID_LENGTH = exports.MAX_NUM_GROUPS = exports.SUBSCRIPTION_USER_LIMITS = exports.HARD_LIMIT_MAX_NUM_USERS = exports.ECOMM_PLUS_MAX_NUM_USERS = exports.ECOMM_STANDARD_MAX_NUM_USERS = exports.BUSINESS_MAX_NUM_USERS = exports.BASIC_MAX_NUM_USERS = exports.STARTER_MAX_NUM_USERS = exports.DEFAULT_TOKEN_AGE_MS = exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = exports.DEFAULT_SESSION_DURATION_IN_MS = exports.LOGGEDIN_COOKIE_NAME = exports.SESSION_COOKIE_NAME = exports.PASSWORD_MAX_LENGTH = exports.PASSWORD_MIN_LENGTH = exports.DEFAULT_STYLES = exports.USYS_PAGE_UTIL_KEYS = exports.USYS_RESERVED_SLUGS = exports.USYS_PAGE_SETTINGS = exports.USYS_USER_STATES = exports.USYS_INPUT_SIGN_UP_IDS = exports.USYS_INPUT_TYPES = exports.USYS_FORM_TYPES = exports.USYS_DOM_CLASS_NAMES = exports.USYS_DATA_ATTRS = exports.USYS_UTILITY_KEYS = exports.TEXT_INPUT_TYPE_TO_FIELD_TYPE = exports.NAMES_FROM_USER_FIELDS = exports.KEY_FROM_RESERVED_USER_FIELD = exports.RESERVED_USER_FIELDS = exports.RESERVED_USER_PREFIX = void 0;
 
 var _extends2 = _interopRequireDefault(__webpack_require__(11));
 
@@ -1579,8 +1586,6 @@ Object.keys(_errorStates).forEach(function (key) {
     }
   });
 });
-var TEMP_IS_TESTING_FILE_INPUT = false;
-exports.TEMP_IS_TESTING_FILE_INPUT = TEMP_IS_TESTING_FILE_INPUT;
 var RESERVED_USER_PREFIX = 'wf-user-field-';
 exports.RESERVED_USER_PREFIX = RESERVED_USER_PREFIX;
 var RESERVED_USER_FIELDS = {
@@ -1743,10 +1748,40 @@ var DEFAULT_SESSION_DURATION_IN_MS = 7 * DAY;
 exports.DEFAULT_SESSION_DURATION_IN_MS = DEFAULT_SESSION_DURATION_IN_MS;
 var DEFAULT_SESSION_TOKEN_DURATION_IN_MS = 4 * HOUR;
 exports.DEFAULT_SESSION_TOKEN_DURATION_IN_MS = DEFAULT_SESSION_TOKEN_DURATION_IN_MS;
-var DEFAULT_TOKEN_AGE_MS = HOUR;
+var DEFAULT_TOKEN_AGE_MS = HOUR; // The maximum number of users that a free site can have. A free site in this
+// case means a site that doesn't have a site plan.
+
 exports.DEFAULT_TOKEN_AGE_MS = DEFAULT_TOKEN_AGE_MS;
-var MAX_NUM_USERS = 20000;
-exports.MAX_NUM_USERS = MAX_NUM_USERS;
+var STARTER_MAX_NUM_USERS = 100;
+exports.STARTER_MAX_NUM_USERS = STARTER_MAX_NUM_USERS;
+var BASIC_MAX_NUM_USERS = 20000;
+exports.BASIC_MAX_NUM_USERS = BASIC_MAX_NUM_USERS;
+var BUSINESS_MAX_NUM_USERS = 20000;
+exports.BUSINESS_MAX_NUM_USERS = BUSINESS_MAX_NUM_USERS;
+var ECOMM_STANDARD_MAX_NUM_USERS = 20000;
+exports.ECOMM_STANDARD_MAX_NUM_USERS = ECOMM_STANDARD_MAX_NUM_USERS;
+var ECOMM_PLUS_MAX_NUM_USERS = 20000; // In some cases, we might want to have some sites go over their plan limit.
+// However, for safety we should always have a hard limit for our system. This
+// limit can be increased but should be done gradually as we learn about our
+// customers needs.
+
+exports.ECOMM_PLUS_MAX_NUM_USERS = ECOMM_PLUS_MAX_NUM_USERS;
+var HARD_LIMIT_MAX_NUM_USERS = 50000; // Map user limits to siteSubscription types defined in
+// public/js/designer-flux/stores/SiteDataStateType.js
+
+exports.HARD_LIMIT_MAX_NUM_USERS = HARD_LIMIT_MAX_NUM_USERS;
+var SUBSCRIPTION_USER_LIMITS = {
+  free: STARTER_MAX_NUM_USERS,
+  business: BUSINESS_MAX_NUM_USERS,
+  ecommerce_standard: ECOMM_STANDARD_MAX_NUM_USERS,
+  ecommerce_plus: ECOMM_PLUS_MAX_NUM_USERS,
+  "static": BASIC_MAX_NUM_USERS,
+  cms: BASIC_MAX_NUM_USERS,
+  ecommerce_advanced: BASIC_MAX_NUM_USERS,
+  enterprise: BASIC_MAX_NUM_USERS,
+  enterprise_lite: BASIC_MAX_NUM_USERS
+};
+exports.SUBSCRIPTION_USER_LIMITS = SUBSCRIPTION_USER_LIMITS;
 var MAX_NUM_GROUPS = 20;
 exports.MAX_NUM_GROUPS = MAX_NUM_GROUPS;
 var MIN_GROUP_ID_LENGTH = 2;
@@ -1987,8 +2022,14 @@ var USER_STATUSES = {
   unverified: 'Unverified'
 };
 exports.USER_STATUSES = USER_STATUSES;
-var USER_PAGE_SIZE = 100;
+var USER_PAGE_SIZE = 100; // User CSV Import constants
+
 exports.USER_PAGE_SIZE = USER_PAGE_SIZE;
+var USER_CSV_IMPORT_STATUS_POLLING_TIMEOUT = 10 * 60 * 1000;
+var USER_CSV_IMPORT_STATUS_POLLING_INTERVAL = 5000;
+exports.USER_CSV_IMPORT_STATUS_POLLING_INTERVAL = USER_CSV_IMPORT_STATUS_POLLING_INTERVAL;
+var USER_CSV_IMPORT_STATUS_MAX_TRIES = Math.floor(USER_CSV_IMPORT_STATUS_POLLING_TIMEOUT / USER_CSV_IMPORT_STATUS_POLLING_INTERVAL);
+exports.USER_CSV_IMPORT_STATUS_MAX_TRIES = USER_CSV_IMPORT_STATUS_MAX_TRIES;
 
 /***/ }),
 /* 27 */
@@ -33496,6 +33537,7 @@ var tram = __webpack_require__(230) && $.tram;
  * _.keys
  * _.has
  * _.now
+ * _.template (webflow: upgraded to 1.13.6)
  *
  * http://underscorejs.org
  * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -33781,15 +33823,21 @@ module.exports = function () {
     "\u2028": 'u2028',
     "\u2029": 'u2029'
   };
-  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+  var escapeRegExp = /\\|'|\r|\n|\u2028|\u2029/g;
 
   var escapeChar = function escapeChar(match) {
     return '\\' + escapes[match];
-  }; // JavaScript micro-templating, similar to John Resig's implementation.
+  }; // In order to prevent third-party code injection through
+  // `_.templateSettings.variable`, we test it against the following regular
+  // expression. It is intentionally a bit more liberal than just matching valid
+  // identifiers, but still prevents possible loopholes through defaults or
+  // destructuring assignment.
+
+
+  var bareIdentifier = /^\s*(\w|\$)+\s*$/; // JavaScript micro-templating, similar to John Resig's implementation.
   // Underscore templating handles arbitrary delimiters, preserves whitespace,
   // and correctly escapes quotes within interpolated code.
   // NB: `oldSettings` only exists for backwards compatibility.
-
 
   _.template = function (text, settings, oldSettings) {
     if (!settings && oldSettings) settings = oldSettings;
@@ -33800,7 +33848,7 @@ module.exports = function () {
     var index = 0;
     var source = "__p+='";
     text.replace(matcher, function (match, escape, interpolate, evaluate, offset) {
-      source += text.slice(index, offset).replace(escaper, escapeChar);
+      source += text.slice(index, offset).replace(escapeRegExp, escapeChar);
       index = offset + match.length;
 
       if (escape) {
@@ -33809,19 +33857,29 @@ module.exports = function () {
         source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
       } else if (evaluate) {
         source += "';\n" + evaluate + "\n__p+='";
-      } // Adobe VMs need the match returned to produce the correct offest.
+      } // Adobe VMs need the match returned to produce the correct offset.
 
 
       return match;
     });
-    source += "';\n"; // If a variable is not specified, place data values in local scope.
+    source += "';\n";
+    var argument = settings.variable;
 
-    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+    if (argument) {
+      // Insure against third-party code injection. (CVE-2021-23358)
+      if (!bareIdentifier.test(argument)) throw new Error('variable is not a bare identifier: ' + argument);
+    } else {
+      // If a variable is not specified, place data values in local scope.
+      source = 'with(obj||{}){\n' + source + '}\n';
+      argument = 'obj';
+    }
+
     source = "var __t,__p='',__j=Array.prototype.join," + "print=function(){__p+=__j.call(arguments,'');};\n" + source + 'return __p;\n';
+    var render;
 
     try {
       // eslint-disable-next-line no-new-func
-      var render = new Function(settings.variable || 'obj', '_', source);
+      render = new Function(settings.variable || 'obj', '_', source);
     } catch (e) {
       e.source = source;
       throw e;
@@ -33832,7 +33890,6 @@ module.exports = function () {
     }; // Provide the compiled source as a convenience for precompilation.
 
 
-    var argument = settings.variable || 'obj';
     template.source = 'function(' + argument + '){\n' + source + '}';
     return template;
   }; // Export underscore
@@ -60582,7 +60639,7 @@ var _classCallCheck2 = _interopRequireDefault(__webpack_require__(32));
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.of = exports.fromNullable = exports.maybe = exports.Some = exports.None = exports.Option = void 0;
+exports.of = exports.maybe = exports.fromNullable = exports.Some = exports.None = exports.Option = void 0;
 var create = Object.create;
 
 var returnThis = function returnThis() {
@@ -60718,6 +60775,12 @@ var SomePrototype = {
   }
 };
 
+var fromNullable = function fromNullable(value) {
+  return value == null ? None : Some(value);
+};
+
+exports.fromNullable = fromNullable;
+
 var maybe = function maybe(fallback) {
   return function (mapValue) {
     return function (option // $FlowIgnore private foldOption
@@ -60728,12 +60791,6 @@ var maybe = function maybe(fallback) {
 };
 
 exports.maybe = maybe;
-
-var fromNullable = function fromNullable(value) {
-  return value == null ? None : Some(value);
-};
-
-exports.fromNullable = fromNullable;
 var of = Some;
 exports.of = of;
 
