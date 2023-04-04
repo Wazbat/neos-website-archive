@@ -1,4 +1,4 @@
-HTTrack3.49-2+libhtsjava.so.2 launched on Tue, 04 Apr 2023 00:35:04 at https://neos.com/
+HTTrack3.49-2+libhtsjava.so.2 launched on Tue, 04 Apr 2023 12:12:16 at https://neos.com/
 (httrack -O ./neos-raw -r0 -w https://neos.com/ )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,8 +6,8 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-00:35:04	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
-00:35:04	Warning: 	Warning: store text/html without scan: ./neos-raw/neos.com/index.html
+12:12:16	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+12:12:16	Warning: 	Warning: store text/html without scan: ./neos-raw/neos.com/index.html
 
 HTTrack Website Copier/3.49-2 mirror complete in 0 seconds : 2 links scanned, 1 files written (78492 bytes overall), no files updated [0 bytes received at 0 bytes/sec]
 (1 errors, 1 warnings, 0 messages)
