@@ -1,4 +1,4 @@
-HTTrack3.49-2+libhtsjava.so.2 launched on Thu, 13 Jul 2023 12:14:13 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-2+libhtsjava.so.2 launched on Fri, 14 Jul 2023 00:44:37 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,17 +6,16 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-12:14:14	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
-12:14:16	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:15:53	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-12:16:05	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
-12:16:48	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
-12:32:21	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:32:28	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-12:32:28	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:32:28	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
-12:32:30	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
-12:32:30	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/features (from https://neos.com/)
+00:44:39	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+00:44:41	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+00:46:16	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+00:46:32	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
+00:47:10	Warning: 	Retry after error 502 (Bad Gateway) at link https://neos.com/features (from https://neos.com/)
+01:02:25	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+01:02:34	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+01:02:34	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+01:02:38	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
+01:02:38	Error: 	"Forbidden" (403) at link https://uploads-ssl.webflow.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
 
-HTTrack Website Copier/3.49-2 mirror complete in 18 minutes 17 seconds : 104 links scanned, 93 files written (25620654 bytes overall), 2 files updated [69817 bytes received at 63 bytes/sec], 72789 bytes transferred using HTTP compression in 2 files, ratio 19%, 1.0 requests per connection
-(4 errors, 7 warnings, 0 messages)
+HTTrack Website Copier/3.49-2 mirror complete in 18 minutes 1 seconds : 107 links scanned, 97 files written (26207024 bytes overall), 6 files updated [628486 bytes received at 581 bytes/sec], 111547 bytes transferred using HTTP compression in 4 files, ratio 21%, 1.0 requests per connection
+(4 errors, 6 warnings, 0 messages)
