@@ -1,4 +1,4 @@
-HTTrack3.49-2+libhtsjava.so.2 launched on Tue, 22 Aug 2023 00:30:11 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-2+libhtsjava.so.2 launched on Tue, 22 Aug 2023 12:11:41 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,15 +6,15 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-00:30:12	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
-00:30:13	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-00:31:29	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-00:31:52	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
-00:46:09	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-00:47:04	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-00:47:04	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-00:47:05	Error: 	"Forbidden" (403) at link https://uploads-ssl.webflow.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
-00:47:05	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
+12:11:43	Error: 	"Bad Gateway" (502) after 2 retries at link https://neos.com/robots.txt (from primary/primary)
+12:11:43	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+12:12:59	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+12:13:22	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
+12:27:41	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+12:28:38	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+12:28:38	Warning: 	HTML file (1611 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+12:28:40	Error: 	"Forbidden" (403) at link https://uploads-ssl.webflow.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
+12:28:40	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
 
-HTTrack Website Copier/3.49-2 mirror complete in 16 minutes 54 seconds : 99 links scanned, 90 files written (24792405 bytes overall), 3 files updated [73831 bytes received at 72 bytes/sec], 95790 bytes transferred using HTTP compression in 3 files, ratio 21%, 1.0 requests per connection
+HTTrack Website Copier/3.49-2 mirror complete in 16 minutes 59 seconds : 99 links scanned, 90 files written (24792405 bytes overall), 3 files updated [74090 bytes received at 72 bytes/sec], 95790 bytes transferred using HTTP compression in 3 files, ratio 21%, 1.0 requests per connection
 (4 errors, 5 warnings, 0 messages)
