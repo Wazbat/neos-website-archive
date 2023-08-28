@@ -6766,9 +6766,10 @@ figcaption {
 }
 
 .column-25 {
+  justify-content: center;
   padding-left: 31px;
   padding-right: 31px;
-  display: block;
+  display: flex;
 }
 
 .column-25.d-none {
