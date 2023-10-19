@@ -3735,7 +3735,7 @@ figcaption {
 
 .button-primary._2-buttons.width-100 {
   width: 100%;
-  background-image: url("../624482476b7fd15d90829813_Group%2038747.html"), linear-gradient(#1c4efd, #2d1e58);
+  background-image: url("../624482476b7fd15d90829813_Group%2038747.png"), linear-gradient(#1c4efd, #2d1e58);
   background-position: 98%, 0 0;
   background-repeat: no-repeat, repeat;
   background-size: auto, auto;
@@ -4039,7 +4039,7 @@ figcaption {
 }
 
 .section.home-hero {
-  background-image: url("../631f7727870e24c91ef293b9_662BD9029B6659B922866125AF3B355150538408%201.html");
+  background-image: url("../631f7727870e24c91ef293b9_662BD9029B6659B922866125AF3B355150538408%201.png");
   background-position: 50%;
   background-size: cover;
   flex-direction: row;
@@ -4053,7 +4053,7 @@ figcaption {
 }
 
 .section.home-hero.home-hero-2 {
-  background-image: url("../6310c7c350601a427bc791a1_DanceGroup_4k_04-min-2%203.html");
+  background-image: url("../6310c7c350601a427bc791a1_DanceGroup_4k_04-min-2%203.png");
   background-position: 50%;
   background-size: cover;
   padding-bottom: 93px;
@@ -4067,7 +4067,7 @@ figcaption {
 .section.about {
   max-height: 90vh;
   min-height: 90vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), #141a2a 96%), url("../61e55a07ff9ce08fbb45f8a5_about-hero-pattern-defi-x-template.html");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #141a2a 96%), url("../61e55a07ff9ce08fbb45f8a5_about-hero-pattern-defi-x-template.svg");
   background-position: 0 0, 120% 100%;
   background-repeat: repeat, no-repeat;
   background-size: auto, contain;
@@ -4078,7 +4078,7 @@ figcaption {
 }
 
 .section.about-cryptos {
-  background-image: linear-gradient(270deg, #141a2a 33%, rgba(0, 0, 0, 0) 72%), linear-gradient(to right, #141a2a, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.html");
+  background-image: linear-gradient(270deg, #141a2a 33%, rgba(0, 0, 0, 0) 72%), linear-gradient(to right, #141a2a, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.svg");
   background-position: 0 0, 0 0, 0%;
   background-repeat: repeat, repeat, no-repeat;
   background-size: auto, auto, auto 100%;
@@ -4238,7 +4238,7 @@ figcaption {
 }
 
 .input.search {
-  background-image: url("../61e55a07ff9ce002d545f8b8_search-icon-webflow-template.html");
+  background-image: url("../61e55a07ff9ce002d545f8b8_search-icon-webflow-template.svg");
   background-position: 94%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -5489,7 +5489,7 @@ figcaption {
   grid-row-gap: 16px;
   color: #fff;
   background-color: #1649ff;
-  background-image: url("../61e55a07ff9ce0c83145f8ac_cta-pattern-right-defi-x-template.html");
+  background-image: url("../61e55a07ff9ce0c83145f8ac_cta-pattern-right-defi-x-template.svg");
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -5507,7 +5507,7 @@ figcaption {
 .cta-wrapper {
   max-height: 490px;
   background-color: #1649ff;
-  background-image: url("../61e55a07ff9ce0494f45f895_cta-pattern-defi-x-template.html");
+  background-image: url("../61e55a07ff9ce0494f45f895_cta-pattern-defi-x-template.svg");
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -7583,7 +7583,7 @@ figcaption {
   }
 
   .section.about-cryptos {
-    background-image: linear-gradient(270deg, #141a2a 33%, rgba(0, 0, 0, 0) 72%), linear-gradient(to right, #141a2a 16%, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.html");
+    background-image: linear-gradient(270deg, #141a2a 33%, rgba(0, 0, 0, 0) 72%), linear-gradient(to right, #141a2a 16%, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.svg");
     background-position: 0 0, 0 0, 20%;
     background-repeat: repeat, repeat, no-repeat;
     background-size: auto, auto, auto 100%;
@@ -8725,7 +8725,7 @@ figcaption {
   }
 
   .section.about-cryptos {
-    background-image: linear-gradient(to right, #141a2a, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.html");
+    background-image: linear-gradient(to right, #141a2a, rgba(0, 0, 0, 0) 40%), url("../61e55a07ff9ce013dc45f8a6_about-globe-defi-x-template.svg");
     background-position: 0 0, 0 88%;
     background-repeat: repeat, no-repeat;
     background-size: auto, 90%;
@@ -10134,35 +10134,35 @@ figcaption {
 
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0dc7145f83d_THICCCBOI-Bold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02cea45f83a_THICCCBOI-Bold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0d67745f83c_THICCCBOI-Bold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0e53b45f83b_THICCCBOI-Bold.otf') format('opentype'), url('../61e55a07ff9ce023d245f850_THICCCBOI-Bold.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0dc7145f83d_THICCCBOI-Bold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02cea45f83a_THICCCBOI-Bold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0d67745f83c_THICCCBOI-Bold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0e53b45f83b_THICCCBOI-Bold.otf') format('opentype'), url('../61e55a07ff9ce023d245f850_THICCCBOI-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b1d245f83f_THICCCBOI-Medium.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0c14445f83e_THICCCBOI-Medium.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce01f0e45f841_THICCCBOI-Medium.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b9f345f840_THICCCBOI-Medium.otf') format('opentype'), url('../61e55a07ff9ce0043f45f84d_THICCCBOI-Medium.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b1d245f83f_THICCCBOI-Medium.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0c14445f83e_THICCCBOI-Medium.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce01f0e45f841_THICCCBOI-Medium.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0b9f345f840_THICCCBOI-Medium.otf') format('opentype'), url('../61e55a07ff9ce0043f45f84d_THICCCBOI-Medium.svg') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02abc45f845_THICCCBOI-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0533e45f842_THICCCBOI-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0605a45f844_THICCCBOI-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0773645f843_THICCCBOI-Regular.otf') format('opentype'), url('../61e55a07ff9ce0d38845f84e_THICCCBOI-Regular.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce02abc45f845_THICCCBOI-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0533e45f842_THICCCBOI-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0605a45f844_THICCCBOI-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0773645f843_THICCCBOI-Regular.otf') format('opentype'), url('../61e55a07ff9ce0d38845f84e_THICCCBOI-Regular.svg') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Thicccboi';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0694f45f84c_THICCCBOI-SemiBold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce04f3645f84a_THICCCBOI-SemiBold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0587f45f846_THICCCBOI-SemiBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce052a245f84b_THICCCBOI-SemiBold.otf') format('opentype'), url('../61e55a07ff9ce06c2345f84f_THICCCBOI-SemiBold.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0694f45f84c_THICCCBOI-SemiBold.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce04f3645f84a_THICCCBOI-SemiBold.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0587f45f846_THICCCBOI-SemiBold.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce052a245f84b_THICCCBOI-SemiBold.otf') format('opentype'), url('../61e55a07ff9ce06c2345f84f_THICCCBOI-SemiBold.svg') format('svg');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Icons defi x template';
-  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0208645f853_icons-defi-x-template.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce087ff45f851_icons-defi-x-template.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce07c0145f855_icons-defi-x-template.woff') format('woff'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0f75445f852_icons-defi-x-template.ttf') format('truetype'), url('../61e55a07ff9ce0607f45f854_icons-defi-x-template.html') format('svg');
+  src: url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0208645f853_icons-defi-x-template.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce087ff45f851_icons-defi-x-template.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce07c0145f855_icons-defi-x-template.woff') format('woff'), url('https://uploads-ssl.webflow.com/61e55a05ff9ce033ad45f7fa/61e55a07ff9ce0f75445f852_icons-defi-x-template.ttf') format('truetype'), url('../61e55a07ff9ce0607f45f854_icons-defi-x-template.svg') format('svg');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
