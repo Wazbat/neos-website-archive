@@ -1,31 +1,93 @@
-<svg width="128" height="95" viewBox="0 0 128 95" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M95.9557 12.0166L65.9574 34.0521L71.5238 21.0515L95.9557 12.0166Z" fill="#E2761B" stroke="#E2761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26.8121 12.0166L56.5096 34.2608L51.214 21.0515L26.8121 12.0166Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M85.1539 63.0948L77.1804 75.2009L94.2708 79.8525L99.1451 63.3631L85.1539 63.0948Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.6528 63.3631L28.4971 79.8525L45.5573 75.2009L37.6139 63.0948L23.6528 63.3631Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M44.6246 42.6397L39.8706 49.7662L56.7804 50.5116L56.2087 32.4717L44.6246 42.6397Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M78.1433 42.6397L66.3485 32.263L65.9574 50.5116L82.8672 49.7661L78.1433 42.6397Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M45.5573 75.2009L55.7574 70.2809L46.9715 63.4824L45.5573 75.2009Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M66.9804 70.2809L77.1804 75.2009L75.7663 63.4824L66.9804 70.2809Z" fill="#E4761B" stroke="#E4761B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M77.1804 75.2009L66.9804 70.2809L67.7928 76.8707L67.7025 79.6438L77.1804 75.2009Z" fill="#D7C1B3" stroke="#D7C1B3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M45.5573 75.2009L55.0352 79.6438L54.9751 76.8707L55.7574 70.2809L45.5573 75.2009Z" fill="#D7C1B3" stroke="#D7C1B3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M55.2158 59.129L46.7308 56.6541L52.7184 53.9407L55.2158 59.129Z" fill="#233447" stroke="#233447" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M67.522 59.129L70.0194 53.9407L76.0371 56.6541L67.522 59.129Z" fill="#233447" stroke="#233447" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M45.5573 75.2009L47.0317 63.0948L37.6139 63.3632L45.5573 75.2009Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M75.7061 63.0948L77.1804 75.2009L85.1539 63.3632L75.7061 63.0948Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M82.8672 49.7662L65.9574 50.5116L67.522 59.129L70.0193 53.9407L76.0371 56.6541L82.8672 49.7662Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M46.7308 56.6541L52.7184 53.9407L55.2158 59.129L56.7804 50.5116L39.8706 49.7662L46.7308 56.6541Z" fill="#CD6116" stroke="#CD6116" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M39.8706 49.7662L46.9715 63.4824L46.7308 56.6541L39.8706 49.7662Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M76.0371 56.6541L75.7663 63.4824L82.8672 49.7662L76.0371 56.6541Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M56.7804 50.5116L55.2158 59.129L57.2016 69.2969L57.6229 55.9087L56.7804 50.5116Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M65.9574 50.5116L65.145 55.8788L65.5361 69.2969L67.522 59.129L65.9574 50.5116Z" fill="#E4751F" stroke="#E4751F" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M67.522 59.129L65.5362 69.2969L66.9804 70.2809L75.7663 63.4824L76.0371 56.6541L67.522 59.129Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M46.7308 56.6541L46.9715 63.4824L55.7574 70.2809L57.2016 69.2969L55.2158 59.129L46.7308 56.6541Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M67.7025 79.6437L67.7928 76.8707L67.0406 76.2147H55.6972L54.9751 76.8707L55.0352 79.6437L45.5573 75.2009L48.8671 77.8845L55.6069 82.5063H67.1308L73.8707 77.8845L77.1804 75.2009L67.7025 79.6437Z" fill="#C0AD9E" stroke="#C0AD9E" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M66.9804 70.2809L65.5361 69.2969H57.2016L55.7574 70.2809L54.9751 76.8707L55.6972 76.2147H67.0406L67.7928 76.8707L66.9804 70.2809Z" fill="#161616" stroke="#161616" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M97.1894 35.4834L99.7469 23.3176L95.9557 12.0166L66.9804 33.3066L78.1433 42.6397L93.8796 47.2018L97.3398 43.1764L95.8354 42.1029L98.2425 39.9262L96.4071 38.495L98.8141 36.6761L97.1894 35.4834Z" fill="#763D16" stroke="#763D16" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.021 23.3176L25.5785 35.4834L23.9537 36.6761L26.3608 38.495L24.5254 39.9262L26.9325 42.1029L25.4281 43.1764L28.8883 47.2018L44.6246 42.6397L55.7574 33.3066L26.8121 12.0166L23.021 23.3176Z" fill="#763D16" stroke="#763D16" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M93.8796 47.2018L78.1433 42.6397L82.8672 49.7662L75.7663 63.4824L85.1539 63.3632H99.1451L93.8796 47.2018Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M44.6246 42.6397L28.8882 47.2018L23.6528 63.3632H37.6139L46.9715 63.4824L39.8706 49.7662L44.6246 42.6397Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M65.9574 50.5116L66.9804 33.3066L71.5238 21.0515H51.214L55.7574 33.3066L56.7804 50.5116L57.1715 55.9385L57.2016 69.2969H65.5361L65.5662 55.9385L65.9574 50.5116Z" fill="#F6851B" stroke="#F6851B" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> prod.website-files.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">8e1a83972854c95e</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">20.84.127.31</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>
