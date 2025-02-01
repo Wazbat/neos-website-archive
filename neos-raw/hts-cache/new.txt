@@ -1,3 +1,3 @@
 date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-00:05:06	16/16	------	502	error ('Bad%20Gateway')	text/plain	date:Fri,%2022%20Apr%202022%2019:31:30%20GMT	https://neos.com/robots.txt		(from )
-00:05:06	78492/78492	------	200	untouched ('OK')	text/html	date:Fri,%2022%20Apr%202022%2019:31:31%20GMT	https://neos.com/	./neos-raw/neos.com/index.html	(from )
+12:01:45	16/16	------	502	error ('Bad%20Gateway')	text/plain	date:Fri,%2022%20Apr%202022%2019:31:30%20GMT	https://neos.com/robots.txt		(from )
+12:01:45	78492/78492	------	200	untouched ('OK')	text/html	date:Fri,%2022%20Apr%202022%2019:31:31%20GMT	https://neos.com/	./neos-raw/neos.com/index.html	(from )
