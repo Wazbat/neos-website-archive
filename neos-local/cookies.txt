@@ -5,6 +5,6 @@
 uploads-ssl.webflow.com	TRUE	/	FALSE	1999999999	SameSite	None
 .prod.website-files.com	TRUE	/	FALSE	1999999999	__cf_bm	9hLl.OSbwOXU3IIAUcTPon42Efj_Gk4KQeeETfKBYPQ-1734610823-1.0.1.1-MSq6z7vK9Hcox3lmNRKnA1wKA4kf3X7VG_viRtMI76vRM5lYeBkKH4vFxXtAb_MwAr.pFeyEM2W3f0KMzSuFEA
 cdn.prod.website-files.com	TRUE	/	FALSE	1999999999	SameSite	None
-.cdn.webflow.com	TRUE	/	FALSE	1999999999	_cfuvid	nSTc5FW1eLUp917M031Bw7fuHM1eIC7RIMSa1_Hp0wM-1740398601755-0.0.1.1-604800000
+.cdn.webflow.com	TRUE	/	FALSE	1999999999	_cfuvid	SykdLsJROfAtLqReuK8agk0I6Mklva87eNkUQrsHbs4-1740441958423-0.0.1.1-604800000
 neos.com	TRUE	/	FALSE	1999999999	SameSite	None
 
