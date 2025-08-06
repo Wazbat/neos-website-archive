@@ -1,4 +1,4 @@
-HTTrack3.49-5 launched on Tue, 05 Aug 2025 12:02:27 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-5 launched on Wed, 06 Aug 2025 00:06:49 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,17 +6,17 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-12:02:30	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:03:36	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-12:03:38	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
-12:06:17	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_63a62ca5253a1f295ce77707f27a907ee9f7fa7d.jpg?t=1644514447 (from https://neos.com/)
-12:19:05	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:20:15	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
-12:20:21	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
-12:20:22	Error: 	"Forbidden" (403) at link https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
-12:20:22	Warning: 	Moved Permanently for https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_63a62ca5253a1f295ce77707f27a907ee9f7fa7d.jpg?t=1644514447
-12:20:22	Warning: 	Warning moved treated for https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_63a62ca5253a1f295ce77707f27a907ee9f7fa7d.jpg?t=1644514447 (real one is https://cdn.steamstatic.com/steam/apps/740250/ss_63a62ca5253a1f295ce77707f27a907ee9f7fa7d.jpg?t=1644514447)
-12:20:22	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
+00:06:51	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+00:07:57	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+00:07:59	Error: 	"Not Found" (404) at link https://fonts.gstatic.com/ (from https://neos.com/)
+00:15:58	Warning: 	Retry after error -4 (No data (connection closed)) at link https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_cbc8231f03040b1cef00459d03d9c224aecc9090.jpg?t=1644514447 (from https://neos.com/)
+00:23:13	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+00:24:23	Warning: 	Retry after error -4 (Interrupted transfer) at link https://fonts.googleapis.com/ (from https://neos.com/)
+00:24:26	Warning: 	HTML file (1621 bytes) retransferred due to lack of cache: https://fonts.googleapis.com/
+00:24:27	Error: 	"Forbidden" (403) at link https://cdn.prod.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg (from https://neos.com/features)
+00:24:27	Warning: 	Moved Permanently for https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_cbc8231f03040b1cef00459d03d9c224aecc9090.jpg?t=1644514447
+00:24:27	Warning: 	Warning moved treated for https://cdn.cloudflare.steamstatic.com/steam/apps/740250/ss_cbc8231f03040b1cef00459d03d9c224aecc9090.jpg?t=1644514447 (real one is https://cdn.steamstatic.com/steam/apps/740250/ss_cbc8231f03040b1cef00459d03d9c224aecc9090.jpg?t=1644514447)
+00:24:27	Error: 	"Interrupted transfer" (-4) after 2 retries at link https://fonts.googleapis.com/ (from https://neos.com/)
 
-HTTrack Website Copier/3.49-5 mirror complete in 17 minutes 56 seconds : 101 links scanned, 89 files written (25297821 bytes overall), 1 files updated [72148 bytes received at 67 bytes/sec], 559 bytes transferred using HTTP compression in 3 files, ratio 93%, 1.0 requests per connection
+HTTrack Website Copier/3.49-5 mirror complete in 17 minutes 39 seconds : 101 links scanned, 89 files written (25297821 bytes overall), 1 files updated [72127 bytes received at 68 bytes/sec], 529 bytes transferred using HTTP compression in 3 files, ratio 94%, 1.1 requests per connection
 (3 errors, 8 warnings, 0 messages)
