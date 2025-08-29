@@ -70,22 +70,51 @@ function y() {
   const patio = patios[randomIndex];
   console.log('Loading patio:', patio.name);
 
-  document.body.style.background = `url("./assets/${patio.name}.jpeg") no-repeat center center fixed`;
-  document.body.style.backgroundSize = "cover";
+  const bgLow = document.getElementById('bg-low');
+  const bgHigh = document.getElementById('bg-high');
 
-    e && (m.remove(e.group), e.dispose(), e = null), e = new N, e.registerPlugin(new C({
-        apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwZjUzMGY4NC0yNDAxLTQ2MjctODg1ZC0wZmJhZTdkYjc2YjMiLCJpZCI6MzI3MjA0LCJpYXQiOjE3NTU4NzIyNDl9.lpLN2Xy_6aN9jlO6_a2cASjCeVEl80h9z2RMNd-Meu4",
-        assetId: "2275207",
-        autoRefreshToken: !0
-    })), e.registerPlugin(new T), e.registerPlugin(new x), e.registerPlugin(new I({
-        dracoLoader: new R().setDecoderPath("https://unpkg.com/three@0.153.0/examples/jsm/libs/draco/gltf/")
-    })), e.registerPlugin(new L({
-        lat: patio.lat * s.DEG2RAD,
-        lon: patio.lon * s.DEG2RAD
-    })), m.add(e.group), e.setResolutionFromRenderer(t, n), e.setCamera(t);
- i.azimuthAngle = 3;
-i.update();
+  const lowResImg = new Image();
+  lowResImg.src = `./assets/${patio.name}-low.jpg`;
+  lowResImg.onload = () => {
+    bgLow.style.backgroundImage = `url("${lowResImg.src}")`;
+
+    const highResImg = new Image();
+    highResImg.src = `./assets/${patio.name}.jpg`;
+    highResImg.onload = () => {
+      bgHigh.style.backgroundImage = `url("${highResImg.src}")`;
+      bgHigh.style.opacity = 1;  // fade-in
+    };
+
+    if (e) {
+      m.remove(e.group);
+      e.dispose();
+      e = null;
+    }
+
+    e = new N();
+    e.registerPlugin(new C({
+      apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwZjUzMGY4NC0yNDAxLTQ2MjctODg1ZC0wZmJhZTdkYjc2YjMiLCJpZCI6MzI3MjA0LCJpYXQiOjE3NTU4NzIyNDl9.lpLN2Xy_6aN9jlO6_a2cASjCeVEl80h9z2RMNd-Meu4",
+      assetId: "2275207",
+      autoRefreshToken: true
+    }));
+    e.registerPlugin(new T());
+    e.registerPlugin(new x());
+    e.registerPlugin(new I({
+      dracoLoader: new R().setDecoderPath("https://unpkg.com/three@0.153.0/examples/jsm/libs/draco/gltf/")
+    }));
+    e.registerPlugin(new L({
+      lat: patio.lat * s.DEG2RAD,
+      lon: patio.lon * s.DEG2RAD
+    }));
+
+    m.add(e.group);
+    e.setResolutionFromRenderer(t, n);
+    e.setCamera(t);
+    i.azimuthAngle = 3;
+    i.update();
+  };
 }
+
 
 function A() {
     m = new w;
