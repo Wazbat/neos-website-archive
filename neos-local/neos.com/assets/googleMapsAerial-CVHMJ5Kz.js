@@ -65,32 +65,60 @@ async function loadPatios() {
   }
 }
 
-function y() {
-  const randomIndex = Math.floor(Math.random() * patios.length);
-  const patio = patios[randomIndex];
+async function y() {
+  // Get location name from URL query string (after ?)
+  const query = window.location.search.substring(1); // removes "?"
+  let patio;
+
+  if (query) {
+    // Replace underscores with spaces to match JSON names
+    const queryName = decodeURIComponent(query).replace(/_/g, " ");
+    patio = patios.find(p => p.name.toLowerCase() === queryName.toLowerCase());
+
+    if (!patio) {
+      console.warn(`No patio found for "${queryName}", falling back to random`);
+    }
+  }
+
+  // If no query match, fall back to random
+  if (!patio) {
+    const randomIndex = Math.floor(Math.random() * patios.length);
+    patio = patios[randomIndex];
+  }
+
   console.log('Loading patio:', patio.name);
+
+  if (patio.teaser && patio.teaser.trim() !== "") {
+    document.title = `${patio.teaser} | Neos Patio`;
+  } else {
+    document.title = `${patio.name} | Neos Patio`;
+  }
 
   const bgLow = document.getElementById('bg-low');
   const bgHigh = document.getElementById('bg-high');
 
+  // Load low-res background first
   const lowResImg = new Image();
   lowResImg.src = `./assets/${patio.name}-low.jpg`;
   lowResImg.onload = () => {
     bgLow.style.backgroundImage = `url("${lowResImg.src}")`;
 
+    // Load high-res background
     const highResImg = new Image();
     highResImg.src = `./assets/${patio.name}.jpg`;
     highResImg.onload = () => {
       bgHigh.style.backgroundImage = `url("${highResImg.src}")`;
-      bgHigh.style.opacity = 1;  // fade-in
+      bgHigh.style.opacity = 1; // smooth fade-in
     };
 
+    // Dispose previous tiles if any
     if (e) {
       m.remove(e.group);
       e.dispose();
       e = null;
     }
 
+    // Init new tiles
     e = new N();
     e.registerPlugin(new C({
       apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwZjUzMGY4NC0yNDAxLTQ2MjctODg1ZC0wZmJhZTdkYjc2YjMiLCJpZCI6MzI3MjA0LCJpYXQiOjE3NTU4NzIyNDl9.lpLN2Xy_6aN9jlO6_a2cASjCeVEl80h9z2RMNd-Meu4",
@@ -102,9 +130,20 @@ function y() {
     e.registerPlugin(new I({
       dracoLoader: new R().setDecoderPath("https://unpkg.com/three@0.153.0/examples/jsm/libs/draco/gltf/")
     }));
+
+    // --- Use height directly from patios.json ---
+    const latRad = patio.lat * s.DEG2RAD;
+    const lonRad = patio.lon * s.DEG2RAD;
+    const offsetHeight = patio.height || 50;
+
+    console.log(
+      `Camera target for ${patio.name}: using offsetHeight=${offsetHeight}`
+    );
+
     e.registerPlugin(new L({
-      lat: patio.lat * s.DEG2RAD,
-      lon: patio.lon * s.DEG2RAD
+      lat: latRad,
+      lon: lonRad,
+      height: offsetHeight
     }));
 
     m.add(e.group);
@@ -114,7 +153,6 @@ function y() {
     i.update();
   };
 }
-
 
 function A() {
     m = new w;
