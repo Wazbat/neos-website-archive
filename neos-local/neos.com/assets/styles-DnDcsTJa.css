@@ -55,9 +55,12 @@ body {
   width: calc(100vw - clamp(40px, 10vw, 160px));
   height: calc(100vh - clamp(40px, 10vh, 160px));
   backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 40px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.2),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 8px rgba(255, 255, 255, 0.1);
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
@@ -66,7 +69,27 @@ body {
   transition: opacity 0.5s ease;
   opacity: 0.5;
 }
+
+.glass-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    135deg, 
+    rgba(255,255,255,0.3) 0%, 
+    rgba(255,255,255,0) 60%
+  );
+  transform: rotate(-20deg);
+  pointer-events: none;
+  border-radius: inherit;
+  filter: blur(20px);
+}
+
 .glass-container:hover { opacity: 1; }
+
 .map-inner {
   flex: 1;
   border-radius: 20px;
