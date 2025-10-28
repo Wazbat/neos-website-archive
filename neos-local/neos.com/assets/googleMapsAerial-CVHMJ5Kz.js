@@ -211,6 +211,6 @@ function W() {
     D.getPositionToCartographic(p, r);
     const a = e.getAttributions()[0]?.value || "";
     document.getElementById("credits").innerText =
-      "NASA AMMOS, Cesium Ion\n" + M(r.lat, r.lon) + `\n` + a;
+      "NASA AMMOS, Cesium Ion\n" + M(r.lat, r.lon) + `\n` + "Map data © " + a;
   }
 }
