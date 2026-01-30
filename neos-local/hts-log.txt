@@ -1,4 +1,4 @@
-HTTrack3.49-5 launched on Fri, 30 Jan 2026 00:07:33 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-5 launched on Fri, 30 Jan 2026 12:03:57 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -6,6 +6,7 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
+12:06:14	Warning: 	Retry after error -5 (error:00000005:lib(0)::reason(5)) at link https://neos.com/assets/GLTFExtensionsPlugin-DKG5_O3O.js (from https://neos.com/)
 
-HTTrack Website Copier/3.49-5 mirror complete in 2 minutes 20 seconds : 27 links scanned, 26 files written (917862 bytes overall), no files updated [5982 bytes received at 42 bytes/sec]
-(No errors, 0 warnings, 0 messages)
+HTTrack Website Copier/3.49-5 mirror complete in 2 minutes 19 seconds : 28 links scanned, 26 files written (917862 bytes overall), no files updated [5982 bytes received at 43 bytes/sec]
+(No errors, 1 warnings, 0 messages)
