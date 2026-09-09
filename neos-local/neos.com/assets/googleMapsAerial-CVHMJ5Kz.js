@@ -1,3 +1,4 @@
+import { patioFromQuery } from "./patio-links.js";
 import {
     R as g,
     S as w,
@@ -37,16 +38,7 @@ async function loadPatios() {
 }
 
 function pickPatioFromQueryOrRandom() {
-  // Get location name from URL query string (?Prague_Castle)
-  const query = window.location.search.substring(1);
-  if (query) {
-    const queryName = decodeURIComponent(query).replace(/_/g, " ");
-    const p = patios.find(v => v.name.toLowerCase() === queryName.toLowerCase());
-    if (p) return p;
-    console.warn(`No patio found for "${queryName}", falling back to random`);
-  }
-  const randomIndex = Math.floor(Math.random() * patios.length);
-  return patios[randomIndex];
+  return patioFromQuery(patios) || patios[Math.floor(Math.random() * patios.length)];
 }
 
 function y() {
@@ -62,20 +54,38 @@ function y() {
   const bgLow = document.getElementById('bg-low');
   const bgHigh = document.getElementById('bg-high');
 
-  // Load low-res background first (prevents blank screen)
+  // Give the lightweight background priority, but never wait forever.
+  let started = false;
+  let highResStarted = false;
+  const fallbackTimer = setTimeout(startTiles, 5000);
   const lowResImg = new Image();
-  lowResImg.src = `./assets/${patio.name}-low.jpg`;
   lowResImg.onload = () => {
     bgLow.style.backgroundImage = `url("${lowResImg.src}")`;
+    loadHighRes();
+    startTiles();
+  };
+  lowResImg.onerror = () => {
+    loadHighRes();
+    startTiles();
+  };
+  lowResImg.src = `./assets/${patio.name}-low.jpg`;
 
-    // Load high-res background and fade it in
+  function loadHighRes() {
+    if (highResStarted) return;
+    highResStarted = true;
     const highResImg = new Image();
-    highResImg.src = `./assets/${patio.name}.jpg`;
     highResImg.onload = () => {
       bgHigh.style.backgroundImage = `url("${highResImg.src}")`;
-      bgHigh.style.opacity = 1; // CSS transition handles fade
+      bgHigh.style.opacity = 1;
     };
+    highResImg.src = `./assets/${patio.name}.jpg`;
+  }
 
+  function startTiles() {
+    if (started) return;
+    started = true;
+    clearTimeout(fallbackTimer);
+    loadHighRes();
     // Dispose previous tiles if any
     if (e) {
       m.remove(e.group);
@@ -135,7 +145,7 @@ function y() {
     console.log(
       `Camera target for ${patio.name}: height=${offsetHeight}, azimuth=${desiredAzimuth}`
     );
-  };
+  }
 }
 
 function A() {
