@@ -1,53 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta charset="utf-8"/>
-
-		<title>Neos Patio</title>
-      <script type="module" crossorigin src="assets/googleMapsAerial-CVHMJ5Kz.js"></script>
-      <link rel="modulepreload" crossorigin href="assets/three.module-CQU0seT4.js">
-      <link rel="modulepreload" crossorigin href="assets/DRACOLoader-BRrjJKJj.js">
-      <link rel="modulepreload" crossorigin href="assets/OrbitControls-CAmelIij.js">
-      <link rel="modulepreload" crossorigin href="assets/readMagicBytes-ReGFEf36.js">
-      <link rel="modulepreload" crossorigin href="assets/GLTFLoader-Bzr6GmPM.js">
-      <link rel="modulepreload" crossorigin href="assets/Ellipsoid-BKsGN9dG.js">
-      <link rel="modulepreload" crossorigin href="assets/I3DMLoader--guqwtSo.js">
-      <link rel="modulepreload" crossorigin href="assets/GeometryClipper-DDKqlNfA.js">
-      <link rel="modulepreload" crossorigin href="assets/B3DMLoader-BZtrZCNg.js">
-      <link rel="modulepreload" crossorigin href="assets/PNTSLoader-gB5YPyhc.js">
-      <link rel="modulepreload" crossorigin href="assets/CMPTLoader-VEto4VOC.js">
-      <link rel="modulepreload" crossorigin href="assets/EllipsoidRegion-BEIhCuST.js">
-      <link rel="modulepreload" crossorigin href="assets/TilesRenderer-Dt06WWnf.js">
-      <link rel="modulepreload" crossorigin href="assets/ImageFormatPlugin-gd2xpo9t.js">
-      <link rel="modulepreload" crossorigin href="assets/TiledImageSource-Dter0Emb.js">
-      <link rel="modulepreload" crossorigin href="assets/TMSImageSource-BwMpBOyS.js">
-      <link rel="modulepreload" crossorigin href="assets/EPSGTilesPlugin-DJF9gzHX.js">
-      <link rel="modulepreload" crossorigin href="assets/CesiumIonAuthPlugin-DL6JcDIR.js">
-      <link rel="modulepreload" crossorigin href="assets/TileCompressionPlugin-D2vhaUyU.js">
-      <link rel="modulepreload" crossorigin href="assets/GLTFExtensionsPlugin-DKG5_O3O.js">
-      <link rel="modulepreload" crossorigin href="assets/ReorientationPlugin-BUllGpqj.js">
-      <link rel="modulepreload" crossorigin href="assets/TilesFadePlugin-D_u_P2Qt.js">
-      <link rel="stylesheet" crossorigin href="assets/styles-DnDcsTJa.css">
-
-    </head>
-    <body>
-  	<div id="bg-low"></div>
-  	<div id="bg-high"></div>
-
-  	<div id="map-container">
-    	<div class="glass-container">
-      	<div class="map-inner">
-        	<canvas id="map"></canvas>
-        	<div id="footer">
-          	<div id="credits"></div>
-          	<div id="logos">
-            	<img src="assets/neos.png" />
-          	</div>
-       	 </div>
-      	</div>
-    	</div>
-  	</div>
-</body>
-
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#434b50"><style>html,body{background-color:var(--background-tint,#434b50)!important}</style><script>(() => {
+  const colors = {"home":{"default":"#43505c","burj-khalifa":"#5b6e7b","loarre-castle":"#807c77","milan-cathedral":"#7d807e","taj-mahal":"#7f7d7d","tower-bridge":"#45515e","sydney-opera-house":"#8a8888","jeddah-tower":"#8c857b","louvre-abu-dhabi":"#575757","museu-de-les-ciencies":"#7d8c97"},"patios":{"Bethesda Terrace":"#8f633f","Madison Square Garden":"#85807a","Eiffel Tower":"#90979a","Griffith Observatory":"#85817f","Château de Chambord":"#7e817c","Mont Saint Michel":"#79766a","Tōdai-ji":"#817549","National Gallery of Denmark":"#627678","Guggenheim New York":"#777374","Sagrada Família":"#817a75","Elbe Philharmonic Hall":"#74685f","Guggenheim Bilbao":"#7c6a61","Washington Monument":"#837a74","Colosseum":"#8a7b74","Diocletian’s Palace":"#4e5052","Prague Castle":"#615a58"}};
+  const backgrounds = ["default","burj-khalifa","loarre-castle","milan-cathedral","taj-mahal","tower-bridge","sydney-opera-house","jeddah-tower","louvre-abu-dhabi","museu-de-les-ciencies"];
+  const patios = [{"name":"Bethesda Terrace"},{"name":"Madison Square Garden"},{"name":"Eiffel Tower"},{"name":"Griffith Observatory"},{"name":"Château de Chambord"},{"name":"Mont Saint Michel"},{"name":"Tōdai-ji"},{"name":"National Gallery of Denmark"},{"name":"Guggenheim New York"},{"name":"Sagrada Família"},{"name":"Elbe Philharmonic Hall"},{"name":"Guggenheim Bilbao"},{"name":"Washington Monument"},{"name":"Colosseum","assetName":"Colosseo"},{"name":"Diocletian’s Palace"},{"name":"Prague Castle"}];
+  const query = location.search.slice(1);
+  const normalize = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[’']/g, '').replace(/[^A-Za-z0-9-]+/g, '_').replace(/^_+|_+$/g, '').toLowerCase();
+  let color = '#434b50';
+  if (query && !query.includes('=') && !query.includes('&')) {
+    let name = '';
+    try { name = decodeURIComponent(query); } catch {}
+    const patio = patios.find(p => normalize(p.name) === normalize(name) || (p.assetName && normalize(p.assetName) === normalize(name)));
+    if (patio) color = colors.patios[patio.name];
+  } else {
+    const name = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.documentElement.dataset.homeBackground = '/images/home-backgrounds/' + name + '/background.jpg';
+    color = colors.home[name];
+  }
+  document.documentElement.style.setProperty('--background-tint', color);
+  document.querySelector('meta[name="theme-color"]').content = color;
+})();</script><title>Neos Patio</title><link rel="icon" href="favicon.ico"></head><body><div id="root"></div><script type="module" src="hybrid-entry.js"></script></body></html>
