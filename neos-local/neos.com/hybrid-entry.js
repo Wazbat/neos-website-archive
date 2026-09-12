@@ -38,5 +38,5 @@ if (isPatio) {
   document.body.prepend(low);
   document.getElementById('root').style.cssText = 'position:relative;z-index:1';
   document.head.insertAdjacentHTML('beforeend', "<link rel=\"stylesheet\" crossorigin href=\"/homepage/assets/Typography-BkQyI6IB.css\">\n<link rel=\"stylesheet\" crossorigin href=\"/homepage/assets/index-BhteckYW.css\">");
-  await import("/homepage/assets/index-CKb5Ebqm.js");
+  await import("/homepage/assets/index-B-Om_UHT.js");
 }
