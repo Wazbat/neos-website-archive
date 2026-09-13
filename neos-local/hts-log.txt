@@ -1,4 +1,4 @@
-HTTrack3.49-5 launched on Sat, 12 Sep 2026 14:35:47 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
+HTTrack3.49-5 launched on Sun, 13 Sep 2026 01:57:14 at https://neos.com +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf
 (httrack -n -q -%F  -%l "en, *" https://neos.com -O1 ./neos-local +*.css +*.js -ad.doubleclick.net/* +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv +*.pdf )
 
 Information, Warnings and Errors reported for this mirror:
@@ -7,5 +7,5 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	do not share these files/folders if you want these information to remain private
 
 
-HTTrack Website Copier/3.49-5 mirror complete in 5 seconds : 4 links scanned, 3 files written (26225 bytes overall), 1 files updated [4909 bytes received at 981 bytes/sec], 9971 bytes transferred using HTTP compression in 1 files, ratio 37%
+HTTrack Website Copier/3.49-5 mirror complete in 3 seconds : 4 links scanned, 3 files written (26225 bytes overall), no files updated [1001 bytes received at 333 bytes/sec]
 (No errors, 0 warnings, 0 messages)
