@@ -26,7 +26,7 @@ if (isPatio) {
   header.querySelector('p').textContent = patio?.teaser || '';
   document.querySelector('.glass-container').prepend(header);
   document.querySelector('.glass-container').setAttribute('data-background-panel', '');
-  await import('/assets/googleMapsAerial-CVHMJ5Kz.js');
+  await import(patio?.name === 'Mont Saint Michel' ? "/assets/michel-water/viewer-ef765ae822e8.js" : patio?.name === 'Guggenheim New York' ? "/assets/guggenheim/viewer-24a1035b07bf.js" : patio?.name === 'Elbe Philharmonic Hall' ? "/assets/elbe/viewer-ea0436095881.js" : '/assets/googleMapsAerial-CVHMJ5Kz.js');
 } else {
   const backgrounds = ["default","burj-khalifa","loarre-castle","milan-cathedral","taj-mahal","tower-bridge","sydney-opera-house","jeddah-tower","louvre-abu-dhabi","museu-de-les-ciencies"];
   const src = document.documentElement.dataset.homeBackground;
