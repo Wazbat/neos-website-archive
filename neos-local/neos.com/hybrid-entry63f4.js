@@ -26,7 +26,7 @@ if (isPatio) {
   header.querySelector('p').textContent = patio?.teaser || '';
   document.querySelector('.glass-container').prepend(header);
   document.querySelector('.glass-container').setAttribute('data-background-panel', '');
-  await import(patio?.name === 'Mont Saint Michel' ? "/assets/michel-water/viewer-ef765ae822e8.js" : patio?.name === 'Guggenheim New York' ? "/assets/guggenheim/viewer-24a1035b07bf.js" : patio?.name === 'Elbe Philharmonic Hall' ? "/assets/elbe/viewer-ea0436095881.js" : patio?.name === 'Bethesda Terrace' ? "/assets/bethesda/viewer-8eb963a34d04.js" : patio?.name === 'Château de Chambord' ? "/assets/chambord/viewer-568ecb8b8942.js" : patio?.name === 'Eiffel Tower' ? "/assets/eiffel/viewer-bfbfb413b767.js" : '/assets/googleMapsAerial-CVHMJ5Kz.js');
+  await import(patio?.name === 'Mont Saint Michel' ? "/assets/michel-water/viewer-ef765ae822e8.js" : patio?.name === 'Guggenheim New York' ? "/assets/guggenheim/viewer-e60407765911.js" : patio?.name === 'Elbe Philharmonic Hall' ? "/assets/elbe/viewer-ea0436095881.js" : patio?.name === 'Bethesda Terrace' ? "/assets/bethesda/viewer-8eb963a34d04.js" : patio?.name === 'Château de Chambord' ? "/assets/chambord/viewer-568ecb8b8942.js" : patio?.name === 'Eiffel Tower' ? "/assets/eiffel/viewer-bfbfb413b767.js" : patio?.name === 'Washington Monument' ? "/assets/washington/viewer-4bc9f6241fdb.js" : '/assets/googleMapsAerial-CVHMJ5Kz.js');
 } else {
   const backgrounds = ["default","burj-khalifa","loarre-castle","milan-cathedral","taj-mahal","tower-bridge","sydney-opera-house","jeddah-tower","louvre-abu-dhabi","museu-de-les-ciencies"];
   const src = document.documentElement.dataset.homeBackground;
