@@ -1,4 +1,4 @@
-import { startPage } from "/hybrid-visit.js?v=578aeea339f5";
+import { startPage } from "/hybrid-visit.js?v=29e94de95cca";
 if (startPage()) {
 await import('/hybrid-background-peek.js');
 const query = location.search.slice(1);
@@ -28,7 +28,7 @@ if (isPatio) {
   header.querySelector('p').textContent = patio?.teaser || '';
   document.querySelector('.glass-container').prepend(header);
   document.querySelector('.glass-container').setAttribute('data-background-panel', '');
-  await import(patio?.name === 'Mont Saint Michel' ? "/assets/michel-water/viewer-2961a6758d3f.js" : patio?.name === 'Guggenheim New York' ? "/assets/guggenheim/viewer-354d276cb597.js" : patio?.name === 'Elbe Philharmonic Hall' ? "/assets/elbe/viewer-64259d0d8b82.js" : patio?.name === 'Bethesda Terrace' ? "/assets/bethesda/viewer-19395b849e0e.js" : patio?.name === 'Château de Chambord' ? "/assets/chambord/viewer-5386edea86c5.js" : patio?.name === 'Eiffel Tower' ? "/assets/eiffel/viewer-569fa217975b.js" : patio?.name === 'Washington Monument' ? "/assets/washington/viewer-a8e0741bc8b4.js" : '/assets/googleMapsAerial-CVHMJ5Kz.js');
+  await import(patio?.name === 'Mont Saint Michel' ? "/assets/michel-water/viewer-b7cb342bada3.js" : patio?.name === 'Guggenheim New York' ? "/assets/guggenheim/viewer-8b84c54723dc.js" : patio?.name === 'Elbe Philharmonic Hall' ? "/assets/elbe/viewer-9056590832ea.js" : patio?.name === 'Bethesda Terrace' ? "/assets/bethesda/viewer-61b4369fd849.js" : patio?.name === 'Château de Chambord' ? "/assets/chambord/viewer-cdde464530cc.js" : patio?.name === 'Eiffel Tower' ? "/assets/eiffel/viewer-b156ecccf2ff.js" : patio?.name === 'Washington Monument' ? "/assets/washington/viewer-eb0d31b1f62f.js" : "/assets/googleMapsAerial-CVHMJ5Kz.js?v=53192c95e76d");
 } else {
   const backgrounds = ["default","burj-khalifa","loarre-castle","milan-cathedral","taj-mahal","tower-bridge","sydney-opera-house","jeddah-tower","louvre-abu-dhabi","museu-de-les-ciencies"];
   const src = document.documentElement.dataset.homeBackground;
@@ -40,6 +40,6 @@ if (isPatio) {
   document.body.prepend(low);
   document.getElementById('root').style.cssText = 'position:relative;z-index:1';
   document.head.insertAdjacentHTML('beforeend', "<link rel=\"stylesheet\" crossorigin href=\"/homepage/assets/Typography-BkQyI6IB.css\">\n<link rel=\"stylesheet\" crossorigin href=\"/homepage/assets/index-BhteckYW.css\">");
-  await import("/homepage/assets/index-c_2h3swU.js");
+  await import("/homepage/assets/index-D6CHp0Rc.js");
 }
 }
